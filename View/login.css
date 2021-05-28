@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor-login-screem{
+    display: flex;
+}
+
+.login-screen-colum-one{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+
+}
+
+.contenedor-marca{
+    display: flex;
+    align-items: center;
+}
+.fa-fire-alt{
+    color: #54BF29;
+    font-size: 30px;
+}
+
+.marca-login{
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.contenedor-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 40vh; */
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    padding-left: 90px;
+    padding-right: 90px;
+    /* border-radius: 20px; */
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  34px 34px 60px #bababa,
+                 -34px -34px 60px #ffffff;
+}
+
+.contenedor-login h3{
+    text-align: center;
+}
+
+.contenedor-login input[type="text"]{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 170%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #CFD1D4;
+}
+
+.contenedor-login input[type="text"]:focus{
+    outline: none;
+    border-bottom: 2px solid #54BF29;
+}
+
+.link-olvide-contra{
+    color: #54BF29;
+    font-size: 12px;
+}
+
+.contenedor-login input[type="submit"]{
+    background-color: #54BF29;
+    border: none;
+    border-radius: 10px;
+    padding: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    width: 170%;
+    color: #ffffff;
+    font-weight: 700;
+
+}
+
+/* ------------------------------------------------ PRIMERA COLUMNA TERMINADA */
+
+
+.login-screen-colum-two{
+    /* overflow: hidden; */
+    /* margin-top: 30px; */
+    /* border: 1px solid black; */
+    margin-left: 480px;
+    text-align: center;
+    /* padding-left: 300px; */
+    font-size: 30px;
+    position: absolute;
+    width: 790px;
+    height: 600px;
+}
+
+.plato-login{
+    width: 400px;
+    position: absolute;
+    top: 250px;
+    right: 200px;
+}
+
+.platos-login{
+    width: 1200px;
+    position: absolute;
+    top: -550px;
+    left: -220px;
+}
+
+.fondo-verde{
+    position:absolute;
+    width: 5000px;
+    height: 900px;
+    background-color: #54BF29;
+    border-radius: 100%;
+    z-index: -1;
+    bottom: -5px;
+    left: 1px;
+}
+
