@@ -73,6 +73,7 @@ body{
 .marca-login{
     margin-left: 10px;
     font-size: 30px;
+    margin-right: 70%;
 }
 
 
@@ -85,10 +86,25 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 30px;
-    width: 170%;
+    width: 70%;
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
+}
+
+.boton-atras{
+    font-size: 12px;
+    background-color: #54BF29;
+    border: #54BF29;
+    border-radius: 10px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 5%;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+
 }
 
 .fa-arrow-circle-left{
@@ -102,4 +118,32 @@ body{
 .boton:hover{
     background:#54BF29;/**/
     opacity:0.9;
+}
+
+.tabla1{
+    width: 80%;
+    border: 2px solid transparent;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+    margin: 30px 1250px 0px 125px;/*top  rigth  bottom  left*/
+    
+
+
+}
+
+.fila1{
+    height: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+    color:white;
+    background-color: #54BF29;
+}
+
+.contenido{
+    height: 45px;
 }
