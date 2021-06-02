@@ -65,8 +65,21 @@ body{
     margin-bottom: 12px;
     border: 1px solid #CFD1D4;
 }
-
 .contenedor-login input[type="text"]:focus{
+    outline: none;
+    border-bottom: 2px solid #54BF29;
+}
+.contenedor-login input[type="password"]{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 170%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #CFD1D4;
+}
+
+.contenedor-login input[type="password"]:focus{
     outline: none;
     border-bottom: 2px solid #54BF29;
 }
