@@ -32,19 +32,17 @@ const Foods = () => {
     },
   ]);
   return (
-    <>
-      <section class="foods">
-        <h3 class="foods-title">Foods</h3>
-        {products.map((product) => (
-          <Food
-            key={product.id}
-            img={product.img}
-            title={product.title}
-            id={product.id}
-          />
-        ))}
-      </section>
-    </>
+    <section class="foods">
+      <h3 class="foods-title">Foods</h3>
+      {products.map((product) => (
+        <Food
+          key={product.id}
+          img={product.img}
+          title={product.title}
+          id={product.id}
+        />
+      ))}
+    </section>
   );
 };
 
