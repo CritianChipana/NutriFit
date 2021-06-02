@@ -1,0 +1,107 @@
+/*Footer styles*/
+.footer {
+    background-color: var(--bgColorFooter);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    position: relative;
+  }
+  .footer-wave {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -8%);
+    height: 30rem;
+    width: 98%;
+    border: 1px solid white;
+    background-color: var(--bgColorFooter);
+  }
+  .footer-title {
+    flex-basis: 100%;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .footer-title h5 {
+    font-size: 3rem;
+    color: var(--colorBlanco);
+  }
+  .footer-title h5 i {
+    padding-right: 1rem;
+    color: var(--colorNaranja);
+  }
+  .footer-column {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 2rem 0rem;
+  }
+  .footer-column li {
+    flex-basis: 100%;
+    padding: 0.5rem 0rem;
+  }
+  .footer-column li h6 {
+    font-size: 1.9rem;
+    padding: 1rem 0rem;
+    color: var(--colorBlanco);
+  }
+  .footer-column li a {
+    font-size: 1.6rem;
+    color: var(--colorBlanco);
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .footer-column-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-column-apps .footer-column-apps__applink {
+    flex-basis: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-column-apps__applink a picture {
+    flex-basis: 100%;
+  }
+  .footer-column-apps__applink a picture img {
+    width: 10.5rem;
+    height: 3.5rem;
+  }
+  .footer-column-apps .footer-column-apps__link {
+    flex-basis: 20%;
+  }
+  .footer-column-apps .footer-column-apps__link a {
+    font-size: 1.2rem;
+  }
+  
+  @media screen and (min-width: 600px) {
+    /*Footer mediaquerys*/
+    .footer {
+      gap: 3rem;
+    }
+    .footer-column {
+      flex: 1;
+      padding: 2rem 0rem;
+    }
+    .footer-column-apps {
+      justify-content: center;
+    }
+    .footer-column-apps .footer-column-apps__applink {
+      flex-basis: 100%;
+      justify-content: start;
+    }
+    .footer-column-apps .footer-column-apps__applink {
+      flex-basis: 100%;
+    }
+    .footer-column-apps .footer-column-apps__link {
+      flex-basis: 100%;
+    }
+    .footer-column-apps .footer-column-apps__link a {
+      font-size: 1.6rem;
+    }
+  }
+  
