@@ -79,13 +79,52 @@ label{
     border:2px solid #FF922C;
 }
 
+.btn_buscar{
+    padding: 15px;
+    border: none;
+    border-radius: 0px; /*10px*/
+    width: 20%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #CFD1D4;
+    border-color: white;
+    border-radius: 0 10px 10px 0;
+    font-weight: 700;
+    color:#54BF29;
+
+}
+
+.btn_buscar:hover{
+    border-color:  white;
+    background: white;
+    opacity:0.95;
+    outline:none;
+}
+
+.buscador{
+    padding: 15px;
+    padding-right: 50px;
+    border: none;
+    border-radius: 0px; /*10px*/
+    width: 70%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #CFD1D4;
+    border-color: white;
+    border-radius: 10px 0 0 10px;
+}
+
+.buscador:focus{
+    outline: none;
+    border-bottom: 2px solid #FF922C;
+}
 
 
 .buscador-direccion{
     padding: 6px;
     width: 409px;
     margin-top: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
     border: 2px solid #54BF29;
     border-radius: 5px 5px 5px 5px;
 }
@@ -121,16 +160,10 @@ label{
     text-align: center;
 }
 
-.contenedor-tres{
-    margin: 0px 0px 0px 0px; /*40px 70px 40px 70px; top  right  bottom left*/
-    background: white;
-    opacity: 0.9;
-}
-
 .contenedor-tres-y-medio{
-    padding: 20px 110px 50px 110px; /*40px 70px 40px 70px; top  right  bottom left*/
+    padding: 20px 110px 37px 120px; /*40px 70px 40px 70px; top  right  bottom left*/
     background: white;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .fa-fire-alt{
@@ -159,21 +192,31 @@ label{
     text-decoration: none;
 
 }
-
+.boton-atras:hover{
+    background:#54BF29;/**/
+    opacity:0.9;
+}
 
 .boton-guardar{
     font-size: 12px;
-    background-color: #54BF29;
-    border: #54BF29;
-    border-radius: 10px;
-    padding: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 5%;
-    color: #ffffff;
-    font-weight: 700;
     text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background-color: #54BF29;
+    border-radius: 5px;
+    padding: 10px 40px 10px 40px; /*top rigth bottom left */
+    margin: 0px 0px 0px 0px;
+    margin-left:898px;
+    
+}
 
+.boton-guardar:hover{
+    background:#54BF29;/**/
+    opacity:0.9;
+}
+
+.fa-save{
+    padding-right: 10px;
 }
 
 .fa-arrow-circle-left{
@@ -184,9 +227,29 @@ label{
     padding-right: 10px;
 }
 
+.fa-edit{
+    padding-right: 10px;
+}
+
+
 .boton:hover{
     background:#54BF29;/**/
     opacity:0.9;
+}
+
+.boton{
+    font-size: 12px;
+    background-color: #54BF29;
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    width: 70%;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .tabla1{
@@ -199,7 +262,7 @@ label{
     background-color: white;
     text-align: center;
     font-size: 13px;
-    margin: 30px 1250px 0px 125px;/*top  rigth  bottom  left*/
+    margin: 30px 1250px 30px 125px;/*top  rigth  bottom  left*/
     
 
 
