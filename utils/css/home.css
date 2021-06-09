@@ -2,7 +2,6 @@
 @import url("./footer.css");
 
 .main {
-  z-index: -1;
   width: 100%;
 }
 .main-title {
@@ -10,7 +9,7 @@
   align-items: center;
   justify-content: center;
   font-size: 7rem;
-  min-height: 40rem;
+  min-height: 100vh;
   background-image: url("../../img/wave.svg");
   background-position: center;
   background-size: cover;
@@ -19,6 +18,92 @@
 .main-title i {
   color: var(--colorNaranja);
   padding-right: 0.5rem;
+}
+.main-info {
+  padding: 4rem 0rem;
+  width: 100%;
+  background-color: var(--colorVerdeIntermedio);
+}
+.info-title {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.info-title__hands {
+  flex-basis: 100%;
+  text-align: center;
+}
+.info-title__hands i {
+  font-size: 6rem;
+  color: var(--colorNaranja);
+}
+.info-title__text {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 3.2rem;
+  padding: 2rem 0rem;
+}
+.info-cards {
+  padding: 2rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+}
+.info-cards__card {
+  flex-basis: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rem;
+}
+.card-img {
+  text-align: center;
+  position: relative;
+  z-index: 6;
+}
+.card-img img {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.card-img::before {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background: var(--colorVerdeFuerte);
+  clip-path: ellipse(33% 47% at 66% 52%);
+}
+.card-title {
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+.card-description {
+  font-weight: 325;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.card-button {
+  text-align: center;
+  padding: 3rem 0rem 1rem 0rem;
+}
+.card-button a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--colorVerdeFuerte);
+  display: block;
+  padding: 2rem 6rem;
+  color: var(--colorBlanco);
+  border-radius: 10rem;
+  max-width: 30rem;
+  margin: auto;
 }
 .foods {
   width: 100%;
@@ -83,9 +168,15 @@
     flex-basis: 40%;
     max-width: 42rem;
   }
+  .main-title {
+    font-size: 12rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .food {
     flex-basis: 30%;
+  }
+  .main-title {
+    font-size: 16rem;
   }
 }
