@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php session_start();?>
+
+  <?php session_start();?>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +37,7 @@
     <title>Nutri Fit</title>
   </head>
   <body>
-
-    <?php  
+  <?php  
         
         if (isset($_SESSION["usuario"])) {
             if ($_SESSION["usuario"]["idrol"] == 1){
@@ -46,6 +47,7 @@
             header("location:login.php");
         }
 ?>
+
 
     <div class="loader">
       <div class="container">
@@ -58,69 +60,17 @@
             <ul class="nav-list">
               <li><a href="">Home</a></li>
               <li><a href="">Exercises</a></li>
-              <li><a href="cerrar-sesion.php">Cerrar Session</a></li>
+              <li><a href="">About</a></li>
             </ul>
           </nav>
         </header>
         <main class="main">
           <h2 class="main-title"><i class="fas fa-fire-alt"></i>Nutri Fit</h2>
-          <!-- <div id="root"></div>  -->
-          <div class="main-info">
-            <div class="info-title">
-              <picture class="info-title__hands">
-                <i class="far fa-handshake"></i>
-              </picture>
-              <h3 class="info-title__text">Hagámoslo juntos</h3>
-            </div>
-            <section class="info-cards">
-              <article class="info-cards__card">
-                <picture class="card-img">
-                  <img src="../img/chef.png" alt="" />
-                </picture>
-                <h4 class="card-title">Conviértete en Partner</h4>
-                <p class="card-description">
-                  ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                  usuarios pueden ayudarte a impulsar las ventas y encontrar
-                  nuevas oportunidades!
-                </p>
-                <div class="card-button">
-                  <a href="">Únete a nosotros</a>
-                </div>
-              </article>
-              <article class="info-cards__card">
-                <picture class="card-img">
-                  <img src="../img/chef.png" alt="" />
-                </picture>
-                <h4 class="card-title">Conviértete en Partner</h4>
-                <p class="card-description">
-                  ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                  usuarios pueden ayudarte a impulsar las ventas y encontrar
-                  nuevas oportunidades!
-                </p>
-                <div class="card-button">
-                  <a href="">Únete a nosotros</a>
-                </div>
-              </article>
-              <article class="info-cards__card">
-                <picture class="card-img">
-                  <img src="../img/chef.png" alt="" />
-                </picture>
-                <h4 class="card-title">Conviértete en Partner</h4>
-                <p class="card-description">
-                  ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                  usuarios pueden ayudarte a impulsar las ventas y encontrar
-                  nuevas oportunidades!
-                </p>
-                <div class="card-button">
-                  <a href="">Únete a nosotros</a>
-                </div>
-              </article>
-            </section>
-          </div>
+          <div id="root"></div>
         </main>
         <footer class="footer">
           <picture class="footer-wave">
-            <img src="../img/footer-wave.svg" alt="" />
+            <img src="../img/footer-wave.svg" alt="">
           </picture>
           <div class="footer-title">
             <h5><i class="fas fa-fire-alt"></i>Nutri Fit</h5>
@@ -173,6 +123,8 @@
         </footer>
       </div>
     </div>
+<a href="cerrar-sesion.php">Cerrar Session</a>
+
     <script class="text/javascript" src="../utils/js/hamburger.js"></script>
     <script type="text/babel" src="../utils/js/components/App.js"></script>
     <script type="text/babel" src="../utils/js/home.js"></script>
