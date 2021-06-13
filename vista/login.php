@@ -1,11 +1,11 @@
 <?php include 'partials/header.php'   ?>
-<?php include 'partials/menu.php'   ?>
+
 <?php         
         if (isset($_SESSION["usuario"])) {
             if ($_SESSION["usuario"]["idrol"] == 1){
-                header("location:admin.php");
+                header("location:menu.php");
             }elseif ($_SESSION["usuario"]["idrol"] == 2){
-                header("location:usuario.php");
+                header("location:home.php");
             }
 
         }
@@ -31,13 +31,13 @@
                 <i class="fas fa-fire-alt"></i>
                 <h2 class="marca-login">NUTRI&FIT</h2>
             </div>
-            <form action="#" method="post">
+            <form id="loginForm" action="validarCode.php" method="post">
                 <div class="contenedor-login">
                     <h3 >Login</h3>
                     <!-- <label for="">Cuenta:</label> -->
-                    <input type="text" placeholder="2020230478">
+                    <input type="text" name="txtusuario" placeholder="2020230478">
                     <!-- <label for="">Contraseña:</label> -->
-                    <input type="password" placeholder="**********" >
+                    <input type="password" name="txtpassword" placeholder="**********" >
                     <a class="link-olvide-contra" href="#">Olvide mi contraseña</a>
                     <input type="submit" value="Ingresar">
                 </div>

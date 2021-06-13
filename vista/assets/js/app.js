@@ -18,7 +18,7 @@ $(document).ready(function () {
                         type: "success",
                         message: "Usuario encontrado, redireccionando...",
                         callback: function() {
-                            window.location.href = "admin.php";
+                            window.location.href = "menu.php";
                         }
                     });
                 } else {
