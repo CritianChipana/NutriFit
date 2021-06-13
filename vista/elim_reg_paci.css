@@ -107,6 +107,12 @@ body{
 
 }
 
+
+.boton-atras:hover{
+    background:#54BF29;/**/
+    opacity:0.9;
+}
+
 .fa-arrow-circle-left{
     padding-right: 10px;
 }
@@ -130,7 +136,7 @@ body{
     background-color: white;
     text-align: center;
     font-size: 13px;
-    margin: 30px 1250px 0px 125px;/*top  rigth  bottom  left*/
+    margin: 30px 1250px 30px 125px;/*top  rigth  bottom  left*/
     
 
 

@@ -2,7 +2,7 @@
   --colorLetra: black;
   --colorVerdeFuerte: #54bf29;
   --colorBlanco: #ffff;
-  --colorVerdeIntermedio: #b9f0a3;
+  --colorVerdeIntermedio: #e9f8f5;
   --colorVerdeSuave: #eaffe2;
   --colorNaranja: #ff922c;
   --colorNaranjaSuave: #ffeede;
@@ -60,14 +60,17 @@ body {
   background-color: var(--colorBlanco);
 }
 .header {
+  background-color: var(--colorBlanco);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  position: relative;
+  position: fixed;
   padding: 1rem 0rem;
   align-items: center;
   box-shadow: 0.2rem 0.2rem 0.6rem var(--colorSombra);
+  max-height: 5.8rem;
+  z-index: 12;
 }
 .header-logo {
   flex-basis: 80%;
@@ -117,7 +120,6 @@ body {
 }
 .header-nav {
   transition: all 0.5s;
-  z-index: 12;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -140,7 +142,7 @@ body {
   flex-basis: 100%;
   text-align: end;
   padding: 1rem 2rem;
-  border-bottom: 1px solid var(--colorNaranja);
+  border-bottom: 0.1rem solid var(--colorNaranja);
 }
 .nav-list li:hover {
   background-color: var(--colorNaranja);
@@ -153,4 +155,52 @@ body {
 }
 .nav-list li:hover a {
   color: var(--colorBlanco);
+}
+@media screen and (min-width: 1024px) {
+  .header-logo {
+    flex-basis: 30%;
+  }
+  .header-hamburger {
+    display: none;
+  }
+  .header-nav {
+    flex: 1;
+    z-index: 12;
+    position: initial;
+    width: 100%;
+    clip-path: none;
+    opacity: 1;
+    box-shadow: none;
+  }
+  .nav-list {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  .nav-list li {
+    flex-basis: 10%;
+    text-align: end;
+    padding: 1rem 2rem;
+    border-bottom: none;
+    text-align: center;
+  }
+  .nav-list li:hover {
+    background-color: inherit;
+  }
+  .nav-list li a {
+    text-decoration: none;
+    display: initial;
+    font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 0.2rem solid transparent;
+  }
+  .nav-list li:hover a {
+    color: inherit;
+  }
+  .nav-list li a:hover {
+    color: inherit;
+    border-bottom: 0.2rem solid var(--colorNaranja);
+  }
+  .nav-list li a:hover {
+    color: inherit;
+  }
 }

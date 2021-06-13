@@ -68,3 +68,8 @@ body{
     font-family: 'Raleway', sans-serif;
 
 }
+
+.btn_menu:hover{
+    background:#54BF29;/**/
+    opacity:0.9;
+}

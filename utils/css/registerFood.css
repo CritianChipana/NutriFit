@@ -1,7 +1,145 @@
-@import url("./nav.css");
-@import url("./footer.css");
-
-/*Contenido princiapl*/
-.main {
+:root {
+  --colorLetra: black;
+  --colorVerdeFuerte: #54bf29;
+  --colorBlanco: #ffff;
+  --colorVerdeIntermedio: #e9f8f5;
+  --colorVerdeSuave: #eaffe2;
+  --colorNaranja: #ff922c;
+  --colorNaranjaSuave: #ffeede;
+  --colorSombra: rgba(56, 47, 47, 0.692);
+  --colorShadowCards: #e09045;
+  --bgColorFooter: #1d1d1d;
+  --bgcolorPreparation: #f3f3f3;
+  --bgcolorIngredients: #f2f4f8;
+  --colorInput: #4c5d65;
+  --colorBorderInput: #bac6c4;
+  --colorDescriptionForm: #21313c;
 }
-
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  color: var(--colorLetra);
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+/*Contenido princiapl*/
+.register {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.register-background {
+  flex: 3;
+  background-image: url("../../img/register_food.png"),
+    linear-gradient(
+      226deg,
+      var(--colorVerdeFuerte) 48%,
+      var(--colorVerdeFuerte) 100%
+    );
+}
+.register-form {
+  flex: 7;
+  padding: 3rem 2rem;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+.form-title {
+  flex-basis: 100%;
+  padding: 1rem 0rem 0rem 0rem;
+  font-size: 3.5rem;
+}
+.form-title i {
+  color: var(--colorNaranja);
+}
+.form-description {
+  flex-basis: 100%;
+  font-size: 3rem;
+  padding: 1rem 0rem;
+  color: var(--colorDescriptionForm);
+}
+.form-group {
+  flex-basis: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.form-group label {
+  flex-basis: 100%;
+  font-size: 1.8rem;
+  color: var(--colorInput);
+  padding: 0.5rem 0rem;
+}
+.form-group input {
+  flex-basis: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.6rem;
+  border: 0.15rem solid var(--colorBorderInput);
+}
+.form-group select {
+  flex-basis: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  outline: none;
+  border: 0.15rem solid var(--colorBorderInput);
+  font-size: 1.6rem;
+}
+.form-group select option {
+  padding: 5rem 0rem;
+}
+.form-group button {
+  background-color: var(--colorVerdeFuerte);
+  color: white;
+  outline: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--colorBorderInput);
+  margin-top: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  flex-basis: 100%;
+}
+.form-group button:hover {
+  background-color: var(--colorVerdeSuave);
+  color: var(--colorLetra);
+}
+@media screen and (min-width: 768px) {
+  /*Contenido princiapl*/
+  .register {
+    flex-direction: row;
+  }
+  .register-background {
+    flex: 2;
+  }
+  .register-form {
+    flex: 7;
+    padding: 3rem 5rem;
+  }
+  .form-group button {
+    flex-basis: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .register-form {
+    background: url("../../img/cocina.png");
+    background-repeat: no-repeat;
+    background-size: 70rem 70rem;
+    background-position: bottom right;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .register-form {
+    background: url("../../img/cocina.png");
+    background-repeat: no-repeat;
+    background-size: 70rem 70rem;
+    background-position: bottom right;
+  }
+}
