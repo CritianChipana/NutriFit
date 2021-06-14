@@ -80,6 +80,51 @@ public static function listarComida(){
          }
 }
 
+public static function listarComidaE(){
+    $query = "select idcomidas, nombre, ingredientes, descripcion, preparacion, imagen, video, estadofav, iddiagnostico FROM comida";
+    self::getConexion();
+
+    $resultado = self::$cnx->prepare($query);
+    $resultado->execute();
+    $filas = $resultado->fetchAll(PDO::FETCH_OBJ);/*
+    $comida = new Comida();
+    $comida -> setIdcomidas($filas["idcomidas"]);
+    $comida -> setNombre($filas["nombre"]);
+    $comida -> setIngredientes($filas["ingredientes"]);
+    $comida -> setDescripcion($filas["descripcion"]);
+    $comida -> setPreparacion($filas["preparacion"]);
+    $comida -> setImagen($filas["imagen"]);
+    $comida -> setVideo($filas["video"]);
+    $comida -> setEstadofav($filas["estadofav"]);
+    $comida -> setIddiagnostico($filas["iddiagnostico"]);
+    */
+    if($resultado -> rowCount() > 0)   { 
+        foreach($filas as $filas) { 
+        echo "<tr>
+        <td>".$filas -> idcomidas."</td>
+        <td>".$filas -> nombre."</td>
+        <td>".$filas -> ingredientes."</td>
+        <td>".$filas -> descripcion."</td>
+        <td>".$filas -> preparacion."</td>
+        <td>".$filas -> imagen."</td>
+        <td>".$filas -> video."</td>
+        <td>".$filas -> estadofav."</td>
+        <td>".$filas -> iddiagnostico."</td>
+        <td><a href='eliminarComidaCode.php?idcomi=".$filas -> idcomidas."'>Eliminar Comida</a></td>
+        
+        </tr>";
+           }
+         }
+}
+
+public static function eliminarComida($idcomi){
+    $query = "delete from comida where idcomidas = :idcomida ";
+    self::getConexion();
+    $resultado = self::$cnx->prepare($query);
+    $resultado->bindValue(":idcomida", $idcomi);
+    $resultado->execute();
+}
+
 public static function detalleComida($idcomi){
     $query = "select idcomidas, nombre, ingredientes, descripcion, preparacion, imagen, video, estadofav, iddiagnostico FROM comida WHERE idcomidas = :idcomida";
     self::getConexion();

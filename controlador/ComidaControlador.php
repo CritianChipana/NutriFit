@@ -7,10 +7,23 @@ class ComidaControlador{
         
         return ComidaDao::listarComida();
     }
+
+    public static function obtenerComidaE(){
+        // $obj_comida = new Usuario();
+         
+         return ComidaDao::listarComidaE();
+     }
+
     public static function detalleComida($idcomi){
         // $obj_comida = new Usuario();
          
          return ComidaDao::detalleComida($idcomi);
+     }
+
+     public static function eliminarComida($idcomi){
+        // $obj_comida = new Usuario();
+         
+         return ComidaDao::eliminarComida($idcomi);
      }
 
 
