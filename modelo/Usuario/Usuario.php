@@ -1,8 +1,8 @@
 <?php 
 class Usuario{
-    private $idusuario;
-	private $usuario;
-	private $password;
+	private $idusuario;
+    private $usuario;
+    private $password;
     private $nombres;
     private $apellidos;
 	private $dni;
@@ -11,9 +11,10 @@ class Usuario{
     private $correo;
 	private $fecha_nacimiento;
 	private $direccion;
+    private $idrol;
     private $estado;
 
-    public function getIdusuario(){
+   public function getIdusuario(){
 		return $this->idusuario;
 	}
 
@@ -100,7 +101,7 @@ class Usuario{
 	public function setDireccion($direccion){
 		$this->direccion = $direccion;
 	}
-	
+
 	public function getIdrol(){
 		return $this->idrol;
 	}

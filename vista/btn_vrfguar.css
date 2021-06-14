@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color:  #F1C40F ;
+}
+
+.contenedor-login-screem{
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+}
+
+.login-screen-colum-one{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+
+}
+
+.contenedor-marca{
+    display: flex;
+    align-items: center;
+}
+.contenedor-marca-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-fire-alt{
+    color: #54BF29;
+    font-size: 30px;
+}
+
+.marca-login{
+    margin-left: 10px;
+    font-size: 30px;
+}
+.vinculo{
+    font-family: 'Raleway', sans-serif;
+    font-size:12px;
+    color:green;
+}
+
+.contenedor-login{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 20px;
+    background:white;
+}
+
+.contenedor-login h3{
+    text-align: center;
+}
+
+
+.link-olvide-contra{
+    color: #54BF29;
+    font-size: 12px;
+}
+
+
+/* ------------------------------------------------ PRIMERA COLUMNA TERMINADA */
+
+.h5-subti{
+    width: 230px;
+    font-style: normal;
+    text-align: center;
+
+}
+
+
+.adverte{
+    width: 60px;
+    top: 250px;
+    right: 200px;
+}

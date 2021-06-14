@@ -67,22 +67,30 @@ class UsuarioDao extends Conexion{
 
     // Metodo que sirve para registrar usuarios
     public static function registrar($usuario){
-        $query = "insert into usuarios ( nombre, email, usuario, password, rol ) values (:nombre, :email, :usuario, :password, :rol )";
+        $query = "INSERT INTO usuario (usuario, password, nombres, apellidos, dni, sexo, telefono, correo, fecha_nacimiento, direccion, idrol, estado ) 
+                VALUES (:usuario, :password, :nombres, :apellidos, :dni, :sexo, :telefono, :correo, :fecha_nacimiento, :direccion, :idrol, :estado )";
         self::getConexion();
+        
         $resultado = self::$cnx->prepare($query);
         
-        $resultado->bindParam(":nombre", $usuario->getNombre());
-        $resultado->bindParam(":email", $usuario->getEmail());
         $resultado->bindParam(":usuario", $usuario->getUsuario());
         $resultado->bindParam(":password", $usuario->getPassword());
-        $resultado->bindParam(":rol", $usuario->getRol());
-
+        $resultado->bindParam(":nombres", $usuario->getNombres());
+        $resultado->bindParam(":apellidos", $usuario->getApellidos());
+        $resultado->bindParam(":dni", $usuario->getDni());
+        $resultado->bindParam(":sexo", $usuario->getSexo());
+        $resultado->bindParam(":telefono", $usuario->getTelefono());
+        $resultado->bindParam(":correo", $usuario->getCorreo());
+        $resultado->bindParam(":fecha_nacimiento", $usuario->getFecha_nacimiento());
+        $resultado->bindParam(":direccion", $usuario->getDireccion());
+        $resultado->bindParam(":idrol", $usuario->getIdrol());
+        $resultado->bindParam(":estado", $usuario->getEstado());
+        
         if ($resultado->execute()){
             return true;
         }
         return false;
     }
-
 }
 
 ?>

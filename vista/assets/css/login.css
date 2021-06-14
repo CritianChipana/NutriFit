@@ -2,7 +2,8 @@
 /* font-family: 'Raleway', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 /* font-family: 'Comfortaa', cursive; */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap');
+/*  font-family: 'Roboto', sans-serif; */
 
 body{
     margin: 0;
@@ -45,7 +46,8 @@ body{
     padding-bottom: 150px;
     padding-left: 90px;
     padding-right: 90px;
-    /* border-radius: 20px; */
+    font-family: 'Roboto', sans-serif; ;
+
     border-radius: 50px;
     background: #ffffff;
     box-shadow:  34px 34px 60px #bababa,
@@ -65,8 +67,21 @@ body{
     margin-bottom: 12px;
     border: 1px solid #CFD1D4;
 }
-
 .contenedor-login input[type="text"]:focus{
+    outline: none;
+    border-bottom: 2px solid #54BF29;
+}
+.contenedor-login input[type="password"]{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 170%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #CFD1D4;
+}
+
+.contenedor-login input[type="password"]:focus{
     outline: none;
     border-bottom: 2px solid #54BF29;
 }

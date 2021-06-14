@@ -1,15 +1,15 @@
 <?php include 'partials/header.php'   ?>
 <?php  
-        /*
+        
         if (isset($_SESSION["usuario"])) {
             if ($_SESSION["usuario"]["idrol"] == 1){
-                header("location:admin.php");
+                header("location:menu.php");
             }
         }else {
             header("location:login.php");
-        }*/
+        } 
 ?>
-<?php include 'partials/menu.php'   ?>
+
 <div class="container">
 
     <div class="starter-template text-center" >
