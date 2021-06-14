@@ -37,7 +37,7 @@
         </div>
 
         <div class="contenedor-item-menu">
-            <a class="link-menu" href="#">
+            <a class="link-menu" href="registro.php">
                 <i class="fas fa-user-plus"></i>
                 <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
             </a>
