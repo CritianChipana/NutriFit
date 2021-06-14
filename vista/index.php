@@ -3,7 +3,7 @@
         
         if (isset($_SESSION["usuario"])) {
             if ($_SESSION["usuario"]["idrol"] == 1){
-                header("location:admin.php");
+                header("location:menu.php");
             }
         }else {
             header("location:login.php");
