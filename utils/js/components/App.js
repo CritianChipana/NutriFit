@@ -1,14 +1,14 @@
-const Food = ({ id, img, title }) => {
+const Food = ({ id, name, image }) => {
   const handleNavigate = (e) => {
-    window.open(`pages/detalleFood.html`, "_blank");
+    window.open(`Food/food.php?id=` + id, "_blank");
   };
   return (
     <>
       <article class="food">
         <picture class="food-image">
-          <img src={img} alt={title} />
+          <img src={image} alt={name} />
         </picture>
-        <h4 class="food-title">{title}</h4>
+        <h4 class="food-title">{name}</h4>
         <div class="food-button">
           <a onClick={handleNavigate}>Ver más</a>
         </div>
@@ -18,29 +18,21 @@ const Food = ({ id, img, title }) => {
 };
 
 const Foods = () => {
-  React.useEffect(() => {}, []);
-  const [products, setProducts] = React.useState([
-    {
-      id: 1,
-      img: "https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg",
-      title: "Hamburger",
-    },
-    {
-      id: 2,
-      img: "https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg",
-      title: "Hamburger2",
-    },
-  ]);
+  const [foods, setFoods] = React.useState([]);
+  React.useEffect(() => {
+    fetch("../modelo/Comida/comida.controller.php")
+      .then((data) => data.json())
+      .then((foods) => {
+        setFoods(foods);
+      })
+      .catch((e) => console.log("Error", e));
+  }, []);
+  console.log(foods);
   return (
     <section class="foods">
       <h3 class="foods-title">Foods</h3>
-      {products.map((product) => (
-        <Food
-          key={product.id}
-          img={product.img}
-          title={product.title}
-          id={product.id}
-        />
+      {foods.map((food) => (
+        <Food key={food.id} name={food.name} id={food.id} image={food.image} />
       ))}
     </section>
   );
