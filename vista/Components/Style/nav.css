@@ -1,0 +1,35 @@
+
+
+.contenedor-flex{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #8dfa92;
+    height: 50px;
+    z-index: 10;
+    /* border: 1px solid black; */
+    
+}
+
+/* .contenedor-nav{
+    
+    
+} */
+.img-nav{
+    width: 80px;
+    /* padding-right: 20px; */
+    /* padding: 10px; */
+
+}
+
+
+.img-nav:hover{
+    background-color: aqua;
+}
+
+/* ***** LOGO */
+.fa-fire-alt{
+    padding-left: 20PX;
+}
