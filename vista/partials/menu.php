@@ -22,6 +22,7 @@
                     <?php } else { 
                         if ($_SESSION["usuario"]["idrol"]==1) {?>
                             <a class="dropdown-item" href="admin.php">Admin</a>     
+                            <a class="dropdown-item" href="registroComida.php">Registrar Comidas</a>   
                             <a class="dropdown-item" href="cerrar-sesion.php" role="button">Cerrar sesión</a>                  
                     <?php  } else { ?> 
 
