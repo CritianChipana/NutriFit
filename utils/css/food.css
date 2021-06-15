@@ -56,7 +56,7 @@
 .preparation {
   width: 90%;
   margin: auto;
-  padding-bottom: 10rem ;
+  padding-bottom: 10rem;
 }
 .preparation-title {
   font-size: 3.8rem;
@@ -98,6 +98,7 @@
   color: var(--colorNaranja);
 }
 .preparation-detail {
+  flex-basis: 100%;
   margin-top: 2rem;
   background-color: var(--bgcolorPreparation);
   padding: 5rem 4rem;

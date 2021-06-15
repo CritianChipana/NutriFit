@@ -6,7 +6,7 @@ class ComidaService
     {
         $vector = array();
         $conexion = new Conexion();
-        $db = $conexion->getConexion();
+        $db = $conexion->conectar();
         $sql = "SELECT * FROM comida where idcomidas=:id";
         $consulta = $db->prepare($sql);
         $consulta->bindParam(':id', $id);
@@ -35,7 +35,7 @@ class ComidaService
     {
         $vector = array();
         $conexion = new Conexion();
-        $db = $conexion->getConexion();
+        $db = $conexion->conectar();
         $sql = "SELECT * FROM comida";
         $consulta = $db->prepare($sql);
         $consulta->execute();
@@ -52,6 +52,29 @@ class ComidaService
             return $error[0];
         } else {
             return $vector;
+        }
+    }
+
+    public function createFood($food)
+    {
+        try {
+            $conexion = new Conexion();
+            $db = $conexion->conectar();
+            $sql = "INSERT INTO comida (nombre, ingredientes,descripcion,preparacion,imagen,video,estadofav,iddiagnostico) 
+            VALUES (:nombre,:ingredientes , :descripcion,:preparacion,:imagen,:video,:estadofav,:iddiagnostico)";
+            $consulta = $db->prepare($sql);
+            $consulta->bindParam(':nombre', $food["name"]);
+            $consulta->bindParam(':ingredientes', $food["ingredients"]);
+            $consulta->bindParam(':descripcion', $food["description"]);
+            $consulta->bindParam(':preparacion', $food["preparation"]);
+            $consulta->bindParam(':imagen', $food["image"]);
+            $consulta->bindParam(':video', $food["video"]);
+            $consulta->bindParam(':estadofav', $food["estadofav"]);
+            $consulta->bindParam(':iddiagnostico', $food["diagnosis"]);
+            $consulta->execute();
+            return '{"ok":"true","msg":"Comida agregada con exito"}';
+        } catch (Exception $e) {
+            return $e;
         }
     }
 }

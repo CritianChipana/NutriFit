@@ -11,6 +11,8 @@
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
   <!--Babel-->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!--Typed js-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <!--Stylos de index.html-->
   <link rel="stylesheet" href="../utils/css/home.css" />
   <!--GoogleFonts-->
@@ -50,7 +52,9 @@
         </nav>
       </header>
       <main class="main">
-        <h2 class="main-title"><i class="fas fa-fire-alt"></i>Nutri Fit</h2>
+        <h2 class="main-title"><i class="fas fa-fire-alt"></i>
+          <div class="element"></div>
+        </h2>
         <div id="root"></div>
         <div class="main-info">
           <div class="info-title">
@@ -166,9 +170,18 @@
       </footer>
     </div>
   </div>
+  <script type="text/javascript">
+    var typed = new Typed('.element', {
+      strings: ["Somos lo que comemos :D","Nutri Fit"],
+      typeSpeed: 50,
+      startDelay: 1500,
+      backSpeed: 50,
+    });
+  </script>
   <script class="text/javascript" src="../utils/js/hamburger.js"></script>
   <script type="text/babel" src="../utils/js/components/App.js"></script>
   <script type="text/babel" src="../utils/js/home.js"></script>
+
 </body>
 
 </html>
