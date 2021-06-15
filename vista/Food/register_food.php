@@ -135,18 +135,12 @@
                 formData.append('file', file)
                 formData.append("upload_preset", ID_CLOUDINARY)
                 const createFood = async () => {
-                    /* const foodRes = await fetch(URI_CLOUDINARY, {
+                    const foodRes = await fetch(URI_CLOUDINARY, {
                         method: "POST",
-                        headers: {
-                            "Content-Type": "multipart/form-data",
-                            'Access-Control-Allow-Origin': "*",
-                            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-                            "Access-Control-Allow-Headers": "Access-Control-Allow-Headers"
-                        },
                         body: formData
                     })
                     const image = await foodRes.json()
-                    console.log("respuesta" + foodRes) */
+                    food.image = image.url
                     const res = await fetch("../../modelo/Comida/comida.controller.php", {
                         body: JSON.stringify(food),
                         method: "POST",

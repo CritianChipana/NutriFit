@@ -72,15 +72,8 @@
                     </div>
                     <div class="preparation-ingredients">
                         <h4>Ingredientes</h4>
-                        <ul class="ingredients-list">
+                        <ul class="ingredients-list" id="ingredients-list">
                             <li><i class="fas fa-arrow-circle-right"></i><span>1 onza de ron</span></li>
-                            <li>
-                                <i class="fas fa-arrow-circle-right"></i><span>2 onza de Jugo deNaranja</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-arrow-circle-right"></i><span>1/2 onza de Jarabe de
-                                    Granadina</span>
-                            </li>
                         </ul>
                     </div>
                     <div class="preparation-detail">
@@ -172,7 +165,8 @@
             const desriptionFood = document.querySelector(".food-contain p")
             const preparationFood = document.querySelector(".preparation-detail p")
             const videoFood = document.querySelector(".preparation-video iframe")
-            const ingredientsFood = document.querySelectorAll(".ingredients-list span")
+            // Ingredients List
+            const ingredientsList = document.querySelector("#ingredients-list")
             const loadFood = async () => {
                 const res = await fetch("../../modelo/Comida/comida.controller.php?id=" + id)
                 const food = await res.json()
@@ -185,13 +179,22 @@
                     preparationVideo
                 } = food;
                 imageFood.setAttribute("src", image)
-                videoFood.setAttribute("src", preparationVideo)
+                //videoFood.setAttribute("src", preparationVideo)
                 titleFood.innerHTML = name
                 desriptionFood.innerHTML = description
                 preparationFood.innerHTML = preparation
+                // Convertir string a array
                 const ingredientsArray = ingredients.split(",")
-                ingredientsFood.forEach((ingredient, index) => {
-                    ingredient.innerHTML = ingredientsArray[index]
+                ingredientsArray.forEach((ingredient, index) => {
+                    const listItem = document.createElement("li")
+                    const listItemPoint = document.createElement("i")
+                    listItemPoint.classList.add("fas", "fa-arrow-circle-right")
+                    const listItemContent = document.createElement("span")
+                    listItemContent.innerHTML = ingredient
+                    listItem.appendChild(listItemPoint)
+                    listItem.appendChild(listItemContent)
+                    console.log(listItem)
+                    ingredientsList.appendChild(listItem)
                 })
             }
             loadFood()
