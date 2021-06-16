@@ -50,16 +50,14 @@
             <main class="main">
                 <div class="food">
                     <picture class="food-image">
-                        <img src="https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg" alt="" />
+                        <img src="https://app.vinglet.com/default-image.png" alt="default-image" />
                     </picture>
                     <div class="food-contain">
-                        <h1>Product name</h1>
-                        <h2>Description</h2>
+                        <h1>...</h1>
+                        <h2>Descripcción</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                            nobis rem voluptatum voluptatibus debitis nisi nemo corporis
-                            iusto doloremque illum nulla inventore, soluta deleniti quas
-                            alias dignissimos cupiditate.
+                            ..................................................
+                            ..................................................
                         </p>
                     </div>
                 </div>

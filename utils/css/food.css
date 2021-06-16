@@ -30,7 +30,9 @@
   align-items: center;
 }
 .food-image img {
+  max-width: 39rem;
   width: 100%;
+  margin: auto;
 }
 .food-contain {
   flex-basis: 100%;
