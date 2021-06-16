@@ -102,21 +102,12 @@
                 </div>
 
             </div>
-<<<<<<< HEAD
     
             <div class="contenedor-item-menu">
                 <a class="link-menu" href="./Food/register_food.php">
                     <i class="fas fa-apple-alt"></i>
                     <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
                 </a>    
-=======
-
-            <!-- ****************************************************************************************** -->
-            <!-- /////////////////////////////////////////////////// COMIDAS -->
-
-            <div class="contenedor-titulo-menu">
-                <h4>Comidas:</h4>
->>>>>>> 47ae32fae79c07c13996c56330a54c96220fcc53
             </div>
             <div class="contenedor-menu contenedor">
 
