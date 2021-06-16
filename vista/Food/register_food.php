@@ -118,6 +118,7 @@
                 const diagnosis = e.target[4].value
                 const estadofav = e.target[5].value
                 const file = e.target[6].files[0]
+                const video = e.target[7].value
                 const food = {
                     name,
                     description,
@@ -125,8 +126,8 @@
                     ingredients,
                     estadofav,
                     diagnosis,
-                    image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Arroz-con-Pollo.jpg",
-                    video: "https://www.youtube.com/watch?v=h-Mu4dyLCQw&ab_channel=KrimxArayaKrimxAraya"
+                    image: "https://app.vinglet.com/default-image.png",
+                    video
                 }
                 // LOAD IMAGE   https://api.cloudinary.com/v1_1/akanza/image/upload
                 const URI_CLOUDINARY = "https://api.cloudinary.com/v1_1/akanza/image/upload"

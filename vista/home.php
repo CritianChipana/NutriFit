@@ -68,42 +68,39 @@
               <picture class="card-img">
                 <img src="../img/chef.png" alt="" />
               </picture>
-              <h4 class="card-title">Conviértete en Partner</h4>
+              <h4 class="card-title">Envianos tus sugerencias</h4>
               <p class="card-description">
-                ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                usuarios pueden ayudarte a impulsar las ventas y encontrar
-                nuevas oportunidades!
+                Sabemos que conoces de alguna receta que puede resultar perfecta para algunas
+                personas, puedes enviarnos tus recomendaciones y sugerencias 
               </p>
               <div class="card-button">
-                <a href="">Únete a nosotros</a>
+                <a href="">Realizar sugerencia</a>
               </div>
             </article>
             <article class="info-cards__card">
               <picture class="card-img">
-                <img src="../img/chef.png" alt="" />
+                <img src="https://sonaesierracms-v2.cdnpservers.net/wp-content/uploads/sites/38/2018/04/los-mejores-ejercicios-para-hacer-en-casa.jpg" alt="" />
               </picture>
-              <h4 class="card-title">Conviértete en Partner</h4>
+              <h4 class="card-title">Ejercitate correctamente</h4>
               <p class="card-description">
-                ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                usuarios pueden ayudarte a impulsar las ventas y encontrar
-                nuevas oportunidades!
+                En nuestro banco de ejercicios tenemos los que necesitas para poder
+                sacarle mas provecho a la dieta que llevas, logrando mejores resultados
               </p>
               <div class="card-button">
-                <a href="">Únete a nosotros</a>
+                <a href="">Empezar a ejercitarme</a>
               </div>
             </article>
             <article class="info-cards__card">
               <picture class="card-img">
-                <img src="../img/chef.png" alt="" />
+                <img src="https://accionsolidaria.info/wp-content/uploads/2019/03/D0emCNVXgAEHCsH.png" alt="chat-medico" />
               </picture>
-              <h4 class="card-title">Conviértete en Partner</h4>
+              <h4 class="card-title">Conversa con nosotros</h4>
               <p class="card-description">
-                ¡Crece con Glovo! ¡Nuestra tecnología y nuestra base de
-                usuarios pueden ayudarte a impulsar las ventas y encontrar
-                nuevas oportunidades!
+                Atendemos las consultas o dudas en el menor tiempo posible, tendras comunicación
+                directa con el médico de turno
               </p>
               <div class="card-button">
-                <a href="">Únete a nosotros</a>
+                <a href="">Necesito ayuda</a>
               </div>
             </article>
           </section>
@@ -172,7 +169,7 @@
   </div>
   <script type="text/javascript">
     var typed = new Typed('.element', {
-      strings: ["Somos lo que comemos :D","Nutri Fit"],
+      strings: ["Somos lo que comemos :D", "Nutri Fit"],
       typeSpeed: 50,
       startDelay: 1500,
       backSpeed: 50,

@@ -50,16 +50,14 @@
             <main class="main">
                 <div class="food">
                     <picture class="food-image">
-                        <img src="https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg" alt="" />
+                        <img src="https://app.vinglet.com/default-image.png" alt="default-image" />
                     </picture>
                     <div class="food-contain">
-                        <h1>Product name</h1>
-                        <h2>Description</h2>
+                        <h1>...</h1>
+                        <h2>Descripcción</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                            nobis rem voluptatum voluptatibus debitis nisi nemo corporis
-                            iusto doloremque illum nulla inventore, soluta deleniti quas
-                            alias dignissimos cupiditate.
+                            ..................................................
+                            ..................................................
                         </p>
                     </div>
                 </div>
@@ -67,13 +65,12 @@
             <section id="preparation" class="preparation">
                 <h3 class="preparation-title">Preparación</h3>
                 <div class="preparation-contain">
-                    <div class="preparation-video">
-                        <iframe width="100%" height="550" src="https://www.youtube.com/embed/IoGcgmMeM0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <!--   <div class="preparation-video">
+                        <iframe width="100%" height="650" src="https://www.youtube.com/embed/IoGcgmMeM0g"></iframe>
+                    </div> -->
                     <div class="preparation-ingredients">
                         <h4>Ingredientes</h4>
                         <ul class="ingredients-list" id="ingredients-list">
-                            <li><i class="fas fa-arrow-circle-right"></i><span>1 onza de ron</span></li>
                         </ul>
                     </div>
                     <div class="preparation-detail">
@@ -179,7 +176,7 @@
                     preparationVideo
                 } = food;
                 imageFood.setAttribute("src", image)
-                //videoFood.setAttribute("src", preparationVideo)
+                // videoFood.setAttribute("src", preparationVideo)
                 titleFood.innerHTML = name
                 desriptionFood.innerHTML = description
                 preparationFood.innerHTML = preparation
