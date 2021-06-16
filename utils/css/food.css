@@ -73,7 +73,21 @@
 }
 .preparation-video {
   flex-basis: 100%;
-  padding: 0rem 0rem 4rem 0rem;
+  background-color: var(--bgcolorIngredients);
+  padding: 2rem 4rem 1rem 4rem;
+}
+.preparation-video h3 {
+  font-size: 3rem;
+  color: var(--colorLetra);
+  border-bottom: 1px solid var(--colorNaranja);
+}
+.link-food {
+  font-size: 2rem;
+  padding: 2rem 0rem 1rem 0rem;
+}
+.link-food i {
+  padding-right: 1rem;
+  color: var(--colorNaranja);
 }
 .preparation-ingredients {
   flex-basis: 100%;
@@ -84,7 +98,7 @@
   font-size: 3rem;
   text-align: start;
   padding: 1rem 0rem;
-  border-bottom: 1px solid var(--colorSombra);
+  border-bottom: 1px solid var(--colorNaranja);
 }
 .ingredients-list {
   padding: 1rem 0rem;
@@ -127,9 +141,9 @@
   .food-contain p {
     padding: 2rem 0rem;
   }
-  
-.ingredients-list li {
-  font-size: 2rem;
-  padding: 1rem 0rem;
-}
+
+  .ingredients-list li {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
 }

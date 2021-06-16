@@ -65,9 +65,13 @@
             <section id="preparation" class="preparation">
                 <h3 class="preparation-title">Preparación</h3>
                 <div class="preparation-contain">
-                    <!--   <div class="preparation-video">
-                        <iframe width="100%" height="650" src="https://www.youtube.com/embed/IoGcgmMeM0g"></iframe>
-                    </div> -->
+                    <div class="preparation-video">
+                        <h3>Video referencial de ayuda:</h3>
+                        <div class="link-food">
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <a href="https://www.youtube.com/watch?v=doLMt10ytHY&ab_channel=Piso21Piso21Canaloficialdeartista" target="__blank">Ir a Video</a>
+                        </div>
+                    </div>
                     <div class="preparation-ingredients">
                         <h4>Ingredientes</h4>
                         <ul class="ingredients-list" id="ingredients-list">
@@ -161,7 +165,7 @@
             const titleFood = document.querySelector(".food-contain h1")
             const desriptionFood = document.querySelector(".food-contain p")
             const preparationFood = document.querySelector(".preparation-detail p")
-            const videoFood = document.querySelector(".preparation-video iframe")
+            const videoFood = document.querySelector(".link-food a")
             // Ingredients List
             const ingredientsList = document.querySelector("#ingredients-list")
             const loadFood = async () => {
@@ -176,7 +180,7 @@
                     preparationVideo
                 } = food;
                 imageFood.setAttribute("src", image)
-                // videoFood.setAttribute("src", preparationVideo)
+                videoFood.setAttribute("href", preparationVideo)
                 titleFood.innerHTML = name
                 desriptionFood.innerHTML = description
                 preparationFood.innerHTML = preparation
