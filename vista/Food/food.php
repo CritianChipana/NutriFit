@@ -65,13 +65,12 @@
             <section id="preparation" class="preparation">
                 <h3 class="preparation-title">Preparación</h3>
                 <div class="preparation-contain">
-                    <div class="preparation-video">
-                        <iframe width="100%" height="550" src="https://www.youtube.com/embed/IoGcgmMeM0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <!--   <div class="preparation-video">
+                        <iframe width="100%" height="650" src="https://www.youtube.com/embed/IoGcgmMeM0g"></iframe>
+                    </div> -->
                     <div class="preparation-ingredients">
                         <h4>Ingredientes</h4>
                         <ul class="ingredients-list" id="ingredients-list">
-                            <li><i class="fas fa-arrow-circle-right"></i><span>1 onza de ron</span></li>
                         </ul>
                     </div>
                     <div class="preparation-detail">
@@ -177,7 +176,7 @@
                     preparationVideo
                 } = food;
                 imageFood.setAttribute("src", image)
-                //videoFood.setAttribute("src", preparationVideo)
+                // videoFood.setAttribute("src", preparationVideo)
                 titleFood.innerHTML = name
                 desriptionFood.innerHTML = description
                 preparationFood.innerHTML = preparation

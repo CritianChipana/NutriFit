@@ -3,6 +3,7 @@
 
 .main {
   width: 100%;
+  margin-bottom: 4rem;
 }
 .main-title {
   display: flex;
@@ -44,7 +45,7 @@
   padding: 2rem 0rem;
 }
 .info-cards {
-  padding: 2rem 2rem;
+  padding: 2rem 2rem ;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +57,7 @@
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
 }
 .card-img {
   text-align: center;
@@ -64,6 +65,8 @@
   z-index: 6;
 }
 .card-img img {
+  width: 30rem;
+  height: 30rem;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -92,6 +95,7 @@
 .card-button {
   text-align: center;
   padding: 3rem 0rem 1rem 0rem;
+  max-height: 10.5rem;
 }
 .card-button a {
   text-decoration: none;
@@ -102,7 +106,7 @@
   padding: 2rem 6rem;
   color: var(--colorBlanco);
   border-radius: 10rem;
-  max-width: 30rem;
+  max-width: 35rem;
   margin: auto;
 }
 .foods {

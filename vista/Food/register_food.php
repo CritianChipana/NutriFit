@@ -25,7 +25,7 @@
     <?php
 
     if (isset($_SESSION["usuario"])) {
-        if ($_SESSION["usuario"]["idrol"] == 1) {
+        if ($_SESSION["usuario"]["idrol"] == 2) {
             header("location:menu.php");
         }
     } else {

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-    <?php session_start();?>
+<head>
+
+    <?php session_start(); ?>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,97 +17,99 @@
     <link rel="stylesheet" href="./assets/css/login.css">
 
 </head>
+
 <body>
-<?php  
-        
-        if (isset($_SESSION["usuario"])) {
-            if ($_SESSION["usuario"]["idrol"] == 2){
-                header("location:home.php");
-            }
-        }else {
-            header("location:login.php");
+    <?php
+
+    if (isset($_SESSION["usuario"])) {
+        if ($_SESSION["usuario"]["idrol"] == 2) {
+            header("location:home.php");
         }
-?>
+    } else {
+        header("location:login.php");
+    }
+    ?>
 
-<?php include( "./Components/Nav.php" );  ?>
+    <?php include("./Components/Nav.php");  ?>
 
-<div class="contenedor-home-admi">
-    <?php include( "./Components/NavBar.php" );  ?>
-    <div class="asd">
-        
-        <div class="contenedor-titulo-menu" >
-            <h2>BIENVENIDO ADMINISTRADOR</h2>
-        </div>
-        <div class="contenedor-titulo-menu" >
-            <h4>Pacientes:</h4>
-        </div>
-        <div class="contenedor-menu contenedor" >
-    
-        <?php
-            // $contador = 0;
-            // if( $contador==0 ){
-            //     include_once("./Components/CrudPasiente.php");
-            // }else if( $contador==1 ){
-            //     include_once( "./Components/CrudComida.php" );
-            // }
-        ?>
+    <div class="contenedor-home-admi">
+        <?php include("./Components/NavBar.php");  ?>
+        <div class="asd">
 
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="../vista/elim_reg_paci.html">
-                    <i class="fas fa-trash"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Eliminar">
-                </a>
+            <div class="contenedor-titulo-menu">
+                <h2>BIENVENIDO ADMINISTRADOR</h2>
             </div>
-    
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="registro.php">
-                    <i class="fas fa-user-plus"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
-                </a>    
+            <div class="contenedor-titulo-menu">
+                <h4>Pacientes:</h4>
             </div>
-    
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="#">
-                    <i class="fas fa-user-edit"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Modificar">
-                </a>
-            </div>
-    
-        </div>
+            <div class="contenedor-menu contenedor">
 
-        <!-- ****************************************************************************************** -->
-<!-- /////////////////////////////////////////////////// COMIDAS -->
+                <?php
+                // $contador = 0;
+                // if( $contador==0 ){
+                //     include_once("./Components/CrudPasiente.php");
+                // }else if( $contador==1 ){
+                //     include_once( "./Components/CrudComida.php" );
+                // }
+                ?>
 
-        <div class="contenedor-titulo-menu" >
-            <h4>Comidas:</h4>
-        </div>
-        <div class="contenedor-menu contenedor" >
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="../vista/elim_reg_paci.html">
+                        <i class="fas fa-trash"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
+                    </a>
+                </div>
 
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="eliminarComida.php">
-                    <i class="fas fa-trash"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Eliminar">
-                </a>
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="registro.php">
+                        <i class="fas fa-user-plus"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Agregar">
+                    </a>
+                </div>
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="#">
+                        <i class="fas fa-user-edit"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
+                    </a>
+                </div>
+
             </div>
-    
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="registroComida.php">
-                    <i class="fas fa-apple-alt"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
-                </a>    
+
+            <!-- ****************************************************************************************** -->
+            <!-- /////////////////////////////////////////////////// COMIDAS -->
+
+            <div class="contenedor-titulo-menu">
+                <h4>Comidas:</h4>
             </div>
-    
-            <div class="contenedor-item-menu">
-                <a class="link-menu" href="#">
-                    <i class="uil uil-apple"></i>
-                    <input class=" btn_menu btn-eliminar-menu" type="button"  value="Modificar">
-                </a>
+            <div class="contenedor-menu contenedor">
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="eliminarComida.php">
+                        <i class="fas fa-trash"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
+                    </a>
+                </div>
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="Food/register_food.php">
+                        <i class="fas fa-apple-alt"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Agregar">
+                    </a>
+                </div>
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="#">
+                        <i class="uil uil-apple"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
+                    </a>
+                </div>
+
             </div>
-    
         </div>
     </div>
-</div>
 
-<script src="./Components/js/navBar.js"></script>
+    <script src="./Components/js/navBar.js"></script>
 </body>
+
 </html>

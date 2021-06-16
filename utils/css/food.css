@@ -92,7 +92,7 @@
   list-style: none;
 }
 .ingredients-list li {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 1rem 0rem;
 }
 .ingredients-list li i {
@@ -127,4 +127,9 @@
   .food-contain p {
     padding: 2rem 0rem;
   }
+  
+.ingredients-list li {
+  font-size: 2rem;
+  padding: 1rem 0rem;
+}
 }
