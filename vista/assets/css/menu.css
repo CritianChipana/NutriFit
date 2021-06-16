@@ -45,12 +45,19 @@ body{
 .fa-trash,
 .fa-user-plus,
 .fa-user-edit,
-.uil-apple,
 .fa-apple-alt{
     color: #54BF29;
     padding: 20px;
     padding-bottom: 60px;
     font-size: 70px;
+    box-sizing: border-box;
+}
+
+.uil-apple{
+    color: #54BF29;
+    padding: 20px;
+    padding-bottom: 60px;
+    font-size: 90px;
     box-sizing: border-box;
 }
 
