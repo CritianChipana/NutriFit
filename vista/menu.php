@@ -59,7 +59,7 @@
             </div>
     
             <div class="contenedor-item-menu">
-                <a class="link-menu" href="registro.php">
+                <a class="link-menu" href="./agregarPaciente/agregarPaciente.php">
                     <i class="fas fa-user-plus"></i>
                     <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
                 </a>    
@@ -90,7 +90,7 @@
             </div>
     
             <div class="contenedor-item-menu">
-                <a class="link-menu" href="registroComida.php">
+                <a class="link-menu" href="./Food/register_food.php">
                     <i class="fas fa-apple-alt"></i>
                     <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
                 </a>    

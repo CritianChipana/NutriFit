@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $txtfecha_nacimiento = validar_campo($_POST["txtfecha_nacimiento"]);
             $txtdireccion = validar_campo($_POST["txtdireccion"]);
             $txtidrol = 2;
-            $txtestado = validar_campo($_POST["txtdireccion"]);       
+            $txtestado = validar_campo($_POST["txtestado"]);       
             
 
         if(UsuarioControlador::registrar($txtusuario,$txtpassword,$txtnombres,$txtapellidos,$txtdni,$txtsexo,
