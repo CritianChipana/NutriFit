@@ -5,7 +5,7 @@
     width: 20vw;
     height: 100vh;
     /* border: 1px solid black; */
-    background-color: #db7e26; 
+    background-color: #e0730d; 
     padding-top: 20px;
 
     position: fixed;
@@ -14,7 +14,7 @@
 }
 
 .content-navbar-item{
-    border-bottom: 1px solid rgb(2, 2, 2);
+    border-bottom: 1px solid rgb(255, 255, 255);
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -22,19 +22,20 @@
 
 .fa-search,.fa-briefcase, .fa-home{
     padding-right: 15px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 20;
 }
 
 a{
     text-decoration: none;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .content-navbar-item:hover a{
 
     color: #ffffff;
+    font-weight: 700;
 
 }
 

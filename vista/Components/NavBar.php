@@ -1,7 +1,4 @@
-        <?php
-            $hola = $_GET["hola"];
-            $contador =0;
-        ?>
+
         <div class="contenedor-navBar" >
             <div class="content-navbar-item" >
                 <a
