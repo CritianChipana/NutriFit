@@ -3,10 +3,10 @@
         
         if (isset($_SESSION["usuario"])) {
             if ($_SESSION["usuario"]["idrol"] == 1){
-                header("location:admin.php");
+                header("location:menu.php");
             }
         }else {
-            header("location:login.php");
+            header("location:home.php");
         }
 ?>
 <?php include 'partials/menu.php'   ?>

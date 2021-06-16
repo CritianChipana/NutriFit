@@ -131,6 +131,9 @@
 }
 .food-image img {
   width: 100%;
+  height: 30rem;
+  margin: auto;
+  object-fit: cover;
   object-position: center;
 }
 .food-title {
@@ -173,6 +176,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .foods {
+    gap: 3rem;
+  }
   .food {
     flex-basis: 30%;
   }
