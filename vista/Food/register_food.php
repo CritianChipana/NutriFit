@@ -141,7 +141,7 @@
                         body: formData
                     })
                     const image = await foodRes.json()
-                    food.image = image.url
+                    food.image = image.secure_url
                     const res = await fetch("../../modelo/Comida/comida.controller.php", {
                         body: JSON.stringify(food),
                         method: "POST",
