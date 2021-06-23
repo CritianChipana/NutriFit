@@ -43,7 +43,12 @@ class ComidaService
             $vector[] = array(
                 "id" => $fila['idcomidas'],
                 "name" => $fila['nombre'],
+                "description" => $fila['descripcion'],
                 "image" => $fila['imagen'],
+                "ingredients" => $fila["ingredientes"],
+                "preparation" => $fila["preparacion"],
+                "preparationVideo" => $fila["video"],
+                "idDiagnostic" => $fila["iddiagnostico"],
             );
         }
         if (empty($vector[0])) {

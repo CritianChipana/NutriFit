@@ -1,6 +1,7 @@
 const Food = ({ id, name, image }) => {
   const handleNavigate = (e) => {
-    window.open(`Food/food.php?id=` + id, "_blank");
+    window.location.replace(`Food/food.php?id=` + id, "_blank");
+    // window.open(`Food/food.php?id=` + id, "_blank");
   };
   return (
     <>

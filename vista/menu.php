@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <?php session_start(); ?>
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/login.css">
 
 </head>
+
 <body>
     <?php
 
@@ -31,80 +33,80 @@
     <?php include("./Components/Nav.php");  ?>
 
     <div class="contenedor-home-admi">
-        <?php 
-        include( "./Components/NavBar.php" );
-         ?>
+        <?php
+        include("./Components/NavBar.php");
+        ?>
         <div class="asd">
-            
-            <div class="contenedor-titulo-menu" >
+
+            <div class="contenedor-titulo-menu">
                 <h2>BIENVENIDO ADMINISTRADOR</h2>
             </div>
-            <div class="contenedor-titulo-menu" >
+            <div class="contenedor-titulo-menu">
                 <h4>Pacientes:</h4>
             </div>
-            <div class="contenedor-menu contenedor" >
-        
-            <?php
+            <div class="contenedor-menu contenedor">
+
+                <?php
                 // $contador = 0;
                 // if( $contador==0 ){
                 //     include_once("./Components/CrudPasiente.php");
                 // }else if( $contador==1 ){
                 //     include_once( "./Components/CrudComida.php" );
                 // }
-            ?>
+                ?>
 
                 <div class="contenedor-item-menu">
                     <a class="link-menu" href="../vista/elim_reg_paci.html">
                         <i class="fas fa-trash"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Eliminar">
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
                     </a>
                 </div>
-        
+
                 <div class="contenedor-item-menu">
                     <a class="link-menu" href="./agregarPaciente/agregarPaciente.php">
                         <i class="fas fa-user-plus"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
-                    </a>    
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Agregar">
+                    </a>
                 </div>
-        
+
                 <div class="contenedor-item-menu">
                     <a class="link-menu" href="#">
                         <i class="fas fa-user-edit"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Modificar">
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
                     </a>
                 </div>
-        
+
             </div>
 
             <!-- ****************************************************************************************** -->
-    <!-- /////////////////////////////////////////////////// COMIDAS -->
+            <!-- /////////////////////////////////////////////////// COMIDAS -->
 
-            <div class="contenedor-titulo-menu" >
+            <div class="contenedor-titulo-menu">
                 <h4>Comidas:</h4>
             </div>
-            <div class="contenedor-menu contenedor" >
+            <div class="contenedor-menu contenedor">
 
                 <div class="contenedor-item-menu">
-                    <a class="link-menu" href="#">
+                    <a class="link-menu" href="./Food/delete_food.php">
                         <i class="fas fa-trash"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Eliminar">
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
                     </a>
                 </div>
-        
+
                 <div class="contenedor-item-menu">
                     <a class="link-menu" href="./Food/register_food.php">
                         <i class="fas fa-apple-alt"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Agregar">
-                    </a>    
-                </div>
-        
-                <div class="contenedor-item-menu">
-                    <a class="link-menu" href="#">
-                        <i class="uil uil-apple"></i>
-                        <input class=" btn_menu btn-eliminar-menu" type="button"  value="Modificar">
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Agregar">
                     </a>
                 </div>
-        
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="./Food/edit_food.php">
+                        <i class="uil uil-apple"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
