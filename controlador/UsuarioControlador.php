@@ -37,5 +37,15 @@ class UsuarioControlador{
 
         return UsuarioDao::registrar($obj_usuario);
         }
+
+    public static function listarUsuario($where){      
+
+        return UsuarioDao::listarUsuario($where);
+       }
+   
+    public static function eliminarPaciente($idpac){
+
+        return UsuarioDao::eliminarUsuario($idpac);
+    }
 }
 

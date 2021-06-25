@@ -91,6 +91,44 @@ class UsuarioDao extends Conexion{
         }
         return false;
     }
+
+    public static function listarUsuario($where){
+        $query = "select idusuario, nombres, apellidos, dni, sexo, telefono, correo, fecha_nacimiento, direccion FROM usuario $where";
+        self::getConexion();
+        $resultado = self::$cnx->prepare($query);
+
+
+        $resultado->execute();
+        $filas = $resultado->fetchAll(PDO::FETCH_OBJ);
+        if($resultado -> rowCount() > 0)   { 
+            foreach($filas as $filas) { 
+            echo "<tr class='contenido'>
+            <td>".$filas -> idusuario."</td>
+            <td>".$filas -> nombres."</td>
+            <td>".$filas -> apellidos."</td>
+            <td>".$filas -> dni."</td>
+            <td>".$filas -> sexo."</td>
+            <td>".$filas -> telefono."</td>
+            <td>".$filas -> correo."</td>
+            <td>".$filas -> fecha_nacimiento."</td>
+            <td>".$filas -> direccion."</td>
+            <td><a class='boton' href='eliminarPacienteCode.php?idpac=".$filas -> idusuario."'>Eliminar Paciente</a></td>
+            
+            </tr>";
+               }
+             }
+    }
+
+    public static function eliminarUsuario($idpac){
+        $query = "DELETE FROM usuario WHERE idusuario=:idusuario";
+        self::getConexion();
+    
+        $resultado = self::$cnx->prepare($query);
+        $resultado->bindValue(":idusuario", $idpac);
+        $resultado->execute();
+        
+       
+    }
 }
 
 ?>

@@ -56,7 +56,7 @@
                 ?>
 
                 <div class="contenedor-item-menu">
-                    <a class="link-menu" href="../vista/elim_reg_paci.html">
+                    <a class="link-menu" href="../vista/elim_reg_paci.php">
                         <i class="fas fa-trash"></i>
                         <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
                     </a>
