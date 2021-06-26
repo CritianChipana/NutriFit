@@ -112,6 +112,23 @@ class ComidaService
         }
     }
 
+    public function deleteFood($food)
+    {
+        try {
+            $conexion = new Conexion();
+            $db = $conexion->conectar();
+            $sql = "DELETE FROM comida WHERE idcomidas =:id";
+            $consulta = $db->prepare($sql);
+            $consulta->bindParam(':id', $food["id"]);
+            $consulta->execute();
+            return '{"ok":"true","msg":"Comida' . $food["id"] . ' eliminada con exito"}';
+        } catch (Exception $e) {
+            return '{"ok":"false","msg":"' . $e . '}';
+        }
+    }
+
+
+
     public function addToFavoriteFood($food)
     {
         try {

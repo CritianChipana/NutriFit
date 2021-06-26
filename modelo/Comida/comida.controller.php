@@ -32,3 +32,11 @@ if ($method == "POST") {
     $json = $ComidaService->createFood($food);
     echo $json;
 }
+
+if ($method == "DELETE") {
+    $json = null;
+    $food = json_decode(file_get_contents("php://input"), true);
+    $ComidaService = new ComidaService();
+    $json = $ComidaService->deleteFood($food);
+    echo $json;
+}

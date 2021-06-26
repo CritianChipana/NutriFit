@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+
+    <?php session_start(); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +19,22 @@
 </head>
 
 <body>
+    <?php
+
+    if (isset($_SESSION["usuario"])) {
+        if ($_SESSION["usuario"]["idrol"] == 2) {
+            header("location:home.php");
+        }
+    } else {
+        header("location:login.php");
+    }
+    ?>
     <div class="container">
         <header class="header">
             <h1 class="header__title">Panel of control</h1>
+            <span class="header__back">
+                <a href="../menu.php">Back to Menú</a>
+            </span>
         </header>
         <main>
             <table class="table">
