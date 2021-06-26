@@ -42,6 +42,7 @@ main {
   width: 100%;
 }
 .header {
+  max-width: 160rem;
   width: 80%;
   margin: auto;
   background-color: var(--colorTable);
@@ -70,6 +71,9 @@ tr td img {
 }
 thead {
   background-color: var(--bgColorTableHead);
+}
+tbody tr {
+  cursor: pointer;
 }
 tr th {
   padding: 2rem 2rem;
@@ -111,6 +115,9 @@ tr td button:nth-child(2) {
   background-color: var(--btnColorDelete);
 }
 tr:hover td {
+  background-color: var(--colorTableHover);
+}
+tr.active-row td {
   background-color: var(--colorTableHover);
 }
 tr {

@@ -27,14 +27,14 @@
                         <th>
                             <input id="cbAll" type="checkbox">
                         </th>
-                        <th>
+                        <th id="th__name">
                             Name
                         </th>
-                        <th>
+                        <th id="th__image">
                             Image
                         </th>
-                        <th>Diagnostic</th>
-                        <th>Options</th>
+                        <th id="th__diagnostic">Diagnostic</th>
+                        <th id="th__options">Options</th>
                     </tr>
                 </thead>
                 <tbody class="tbody">
@@ -51,48 +51,78 @@
                 const data = await fetch("../../modelo/Comida/comida.controller.php")
                 const foods = await data.json()
                 foods.forEach(async (food) => {
-                    const Food = document.createElement("tr")
-                    const idFood = document.createElement("td")
-                    const inputFood = document.createElement("input")
+                    let Food = document.createElement("tr")
+                    Food.classList.add("row-food")
+                    let idFood = document.createElement("td")
+                    let inputFood = document.createElement("input")
                     inputFood.classList.add("cbFood")
                     inputFood.setAttribute("type", "checkbox")
                     inputFood.setAttribute("value", food.id)
                     idFood.appendChild(inputFood)
-                    const nameFood = document.createElement("td")
+                    let nameFood = document.createElement("td")
                     nameFood.innerHTML = food.name
-                    const imageFood = document.createElement("td")
-                    const image = document.createElement("img")
+                    let imageFood = document.createElement("td")
+                    let image = document.createElement("img")
                     image.setAttribute("src", food.image)
                     imageFood.appendChild(image)
                     const dataDiagnostic = await fetch("../../modelo/Diagnostico/diagnostico.controller.php?id=" + food.idDiagnostic)
                     const diagnostic = await dataDiagnostic.json()
-                    const diagnosticFood = document.createElement("td")
+                    let diagnosticFood = document.createElement("td")
                     diagnosticFood.innerHTML = diagnostic.name
                     Food.appendChild(idFood)
                     Food.appendChild(nameFood)
                     Food.appendChild(imageFood)
                     Food.appendChild(diagnosticFood)
-                    const btnFood = document.createElement("td")
-                    const btnEdit = document.createElement("button")
+                    let btnFood = document.createElement("td")
+                    let btnEdit = document.createElement("button")
                     btnEdit.innerHTML = "Edit"
-                    const btnDelete = document.createElement("button")
+                    let btnDelete = document.createElement("button")
                     btnDelete.innerHTML = "Delete"
                     btnFood.appendChild(btnEdit)
                     btnFood.appendChild(btnDelete)
                     Food.appendChild(btnFood)
                     tbody.appendChild(Food)
+
+                    Food.addEventListener("click", () => {
+                        if (inputFood.checked) {
+                            inputFood.checked = false
+                            Food.classList.remove("active-row")
+                        } else {
+                            inputFood.checked = true
+                            Food.classList.add("active-row")
+                        }
+                    })
                 });
-
-
-                const cbAllFoods = document.querySelector("#cbAll")
-                const cbFood = document.querySelectorAll(".cbFood")
-                console.log(cbAllFoods)
-                console.log(cbFood)
-                cbAllFoods.addEventListener("click", () => {
-
-                })
             }
             loadFoods()
+            const cbAll = document.querySelector("#cbAll")
+            cbAll.addEventListener("click", () => {
+                const cbFoods = document.querySelectorAll(".cbFood")
+                const thName = document.querySelector("#th__name")
+                const thImage = document.querySelector("#th__image")
+                const thDiagnostic = document.querySelector("#th__diagnostic")
+                const thOptions = document.querySelector("#th__options")
+                if (cbAll.checked) {
+                    let foodLenght = cbFoods.length
+                    cbFoods.forEach(cb => {
+                        cb.checked = true
+                        cb.parentNode.parentNode.classList.add("active-row")
+                        thName.innerHTML = `${foodLenght} foods selected`
+                        thImage.innerHTML = ""
+                        thDiagnostic.innerHTML = ""
+                        thOptions.innerHTML = ""
+                    })
+                } else {
+                    cbFoods.forEach(cb => {
+                        cb.checked = false
+                        cb.parentNode.parentNode.classList.remove("active-row")
+                        thName.innerHTML = `Name`
+                        thImage.innerHTML = "Image"
+                        thDiagnostic.innerHTML = "Diagnostic"
+                        thOptions.innerHTML = "Options"
+                    })
+                }
+            })
         })
     </script>
 </body>
