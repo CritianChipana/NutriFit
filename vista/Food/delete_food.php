@@ -40,7 +40,7 @@
             <table class="table">
                 <thead class="thead">
                     <tr>
-                        <th>
+                        <th id="th__cb">
                             <input id="cbAll" type="checkbox">
                         </th>
                         <th id="th__name">
@@ -69,132 +69,209 @@
             const loadFoods = async () => {
                 const data = await fetch("../../modelo/Comida/comida.controller.php")
                 const foods = await data.json()
-                foods.forEach((food) => {
+                if (foods.error) {
+                    const thCb = document.querySelector("#th__cb")
                     const thName = document.querySelector("#th__name")
                     const thImage = document.querySelector("#th__image")
                     const thDiagnostic = document.querySelector("#th__diagnostic")
                     const thOptions = document.querySelector("#th__options")
-                    thName.innerHTML = `Name`
-                    thImage.innerHTML = "Image"
-                    thDiagnostic.innerHTML = "Diagnostic"
-                    thOptions.innerHTML = "Options"
-                    let Food = document.createElement("tr")
-                    Food.classList.add("row-food")
-                    let idFood = document.createElement("td")
-                    let inputFood = document.createElement("input")
-                    inputFood.classList.add("cbFood")
-                    inputFood.setAttribute("type", "checkbox")
-                    inputFood.setAttribute("value", food.id)
-                    idFood.appendChild(inputFood)
-                    let nameFood = document.createElement("td")
-                    nameFood.innerHTML = food.name
-                    let imageFood = document.createElement("td")
-                    let image = document.createElement("img")
-                    image.setAttribute("src", food.image)
-                    imageFood.appendChild(image)
-                    let diagnosticFood = document.createElement("td")
-                    diagnosticFood.innerHTML = food.diagnostic
-                    Food.appendChild(idFood)
-                    Food.appendChild(nameFood)
-                    Food.appendChild(imageFood)
-                    Food.appendChild(diagnosticFood)
-                    let btnFood = document.createElement("td")
-                    let btnEdit = document.createElement("button")
-                    btnEdit.innerHTML = "Edit"
-                    let btnDelete = document.createElement("button")
-                    btnDelete.innerHTML = "Delete"
-                    btnDelete.addEventListener("click", () => {
-                        Swal.fire({
-                            title: 'Are you sure?',
-                            text: "You won't be able to revert this!",
-                            icon: 'warning',
-                            showCancelButton: true,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Yes, delete food!'
-                        }).then(async (result) => {
-                            if (result.isConfirmed) {
-                                let foodId = {
-                                    id: food.id
-                                }
-                                const res = await fetch("../../modelo/Comida/comida.controller.php", {
-                                    body: JSON.stringify(foodId),
-                                    method: "DELETE",
-                                    headers: {
-                                        "Content-Type": "application/json",
+                    thCb.style.display = "none"
+                    thName.innerHTML = `You do not have foods registered`
+                    thName.style.textAlign = "center"
+                    thImage.style.display = "none"
+                    thDiagnostic.style.display = "none"
+                    thOptions.style.display = "none"
+                } else {
+                    foods.forEach((food) => {
+                        const thName = document.querySelector("#th__name")
+                        const thImage = document.querySelector("#th__image")
+                        const thDiagnostic = document.querySelector("#th__diagnostic")
+                        const thOptions = document.querySelector("#th__options")
+                        thName.innerHTML = `Name`
+                        thImage.innerHTML = "Image"
+                        thDiagnostic.innerHTML = "Diagnostic"
+                        thOptions.innerHTML = "Options"
+                        let Food = document.createElement("tr")
+                        Food.classList.add("row-food")
+                        let idFood = document.createElement("td")
+                        let inputFood = document.createElement("input")
+                        inputFood.classList.add("cbFood")
+                        inputFood.setAttribute("type", "checkbox")
+                        inputFood.setAttribute("value", food.id)
+                        idFood.appendChild(inputFood)
+                        let nameFood = document.createElement("td")
+                        nameFood.innerHTML = food.name
+                        let imageFood = document.createElement("td")
+                        let image = document.createElement("img")
+                        image.setAttribute("src", food.image)
+                        imageFood.appendChild(image)
+                        let diagnosticFood = document.createElement("td")
+                        diagnosticFood.innerHTML = food.diagnostic
+                        Food.appendChild(idFood)
+                        Food.appendChild(nameFood)
+                        Food.appendChild(imageFood)
+                        Food.appendChild(diagnosticFood)
+                        let btnFood = document.createElement("td")
+                        let btnEdit = document.createElement("button")
+                        btnEdit.innerHTML = "Edit"
+                        let btnDelete = document.createElement("button")
+                        btnDelete.innerHTML = "Delete"
+                        btnDelete.addEventListener("click", () => {
+                            Swal.fire({
+                                title: 'Are you sure?',
+                                text: "You won't be able to revert this!",
+                                icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Yes, delete food!'
+                            }).then(async (result) => {
+                                if (result.isConfirmed) {
+                                    let foodId = {
+                                        id: food.id
                                     }
-                                })
-                                const data = await res.json()
-                                tbody.innerHTML = ''
-                                loadFoods()
-                                Swal.fire(
-                                    'Deleted!',
-                                    'Your food has been deleted.',
-                                    'success'
-                                )
-                            }
-                        })
-                    })
-                    // btnFood.appendChild(btnEdit)
-                    btnFood.appendChild(btnDelete)
-                    Food.appendChild(btnFood)
-                    tbody.appendChild(Food)
-
-                    Food.addEventListener("click", () => {
-                        if (inputFood.checked) {
-                            inputFood.checked = false
-                            Food.classList.remove("active-row")
-                            const cbFoods = document.querySelectorAll(".cbFood")
-                            const thName = document.querySelector("#th__name")
-                            const thImage = document.querySelector("#th__image")
-                            const thDiagnostic = document.querySelector("#th__diagnostic")
-                            const thOptions = document.querySelector("#th__options")
-                            let countFood = 0
-                            cbFoods.forEach(cb => {
-                                if (cb.checked) {
-                                    countFood++
+                                    const res = await fetch("../../modelo/Comida/comida.controller.php", {
+                                        body: JSON.stringify(foodId),
+                                        method: "DELETE",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        }
+                                    })
+                                    const data = await res.json()
+                                    console.log(data)
+                                    tbody.innerHTML = ''
+                                    loadFoods()
+                                    Swal.fire(
+                                        'Deleted!',
+                                        'Your food has been deleted.',
+                                        'success'
+                                    )
                                 }
                             })
-                            if (countFood == 0) {
-                                thName.innerHTML = `Name`
-                                thImage.innerHTML = "Image"
-                                thDiagnostic.innerHTML = "Diagnostic"
-                                thOptions.innerHTML = "Options"
+                        })
+                        // btnFood.appendChild(btnEdit)
+                        btnFood.appendChild(btnDelete)
+                        Food.appendChild(btnFood)
+                        tbody.appendChild(Food)
+
+                        Food.addEventListener("click", () => {
+                            if (inputFood.checked) {
+                                inputFood.checked = false
+                                Food.classList.remove("active-row")
+                                const cbFoods = document.querySelectorAll(".cbFood")
+                                const thName = document.querySelector("#th__name")
+                                const thImage = document.querySelector("#th__image")
+                                const thDiagnostic = document.querySelector("#th__diagnostic")
+                                const thOptions = document.querySelector("#th__options")
+                                let countFood = 0
+                                cbFoods.forEach(cb => {
+                                    if (cb.checked) {
+                                        countFood++
+                                    }
+                                })
+                                if (countFood == 0) {
+                                    thName.innerHTML = `Name`
+                                    thImage.innerHTML = "Image"
+                                    thDiagnostic.innerHTML = "Diagnostic"
+                                    thOptions.innerHTML = "Options"
+                                } else {
+                                    thName.innerHTML = `${countFood} foods selected`
+                                    thImage.innerHTML = ""
+                                    thDiagnostic.innerHTML = ""
+                                    let btnDelete = document.createElement("button")
+                                    btnDelete.innerHTML = "Delete foods"
+                                    btnDelete.classList.add("button__delete")
+                                    thOptions.innerHTML = ""
+                                    thOptions.append(btnDelete)
+                                }
                             } else {
+                                inputFood.checked = true
+                                Food.classList.add("active-row")
+                                const cbFoods = document.querySelectorAll(".cbFood")
+                                const thName = document.querySelector("#th__name")
+                                const thImage = document.querySelector("#th__image")
+                                const thDiagnostic = document.querySelector("#th__diagnostic")
+                                const thOptions = document.querySelector("#th__options")
+                                let countFood = 0
+                                cbFoods.forEach(cb => {
+                                    if (cb.checked) {
+                                        countFood++
+                                    }
+                                })
                                 thName.innerHTML = `${countFood} foods selected`
                                 thImage.innerHTML = ""
                                 thDiagnostic.innerHTML = ""
-                                let btnDelete = document.createElement("button")
-                                btnDelete.innerHTML = "Delete foods"
-                                btnDelete.classList.add("button__delete")
+                                let btnDeleteAll = document.createElement("button")
+                                btnDeleteAll.innerHTML = "Delete foods"
+                                btnDeleteAll.classList.add("button__delete")
                                 thOptions.innerHTML = ""
-                                thOptions.append(btnDelete)
+                                thOptions.append(btnDeleteAll)
+                                btnDeleteAll.addEventListener("click", () => {
+                                    Swal.fire({
+                                        title: 'Are you sure?',
+                                        text: "You won't be able to revert this!",
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#d33',
+                                        confirmButtonText: 'Yes, delete foods!'
+                                    }).then(async (result) => {
+                                        if (result.isConfirmed) {
+                                            let foods = []
+                                            cbFoods.forEach(cb => {
+                                                if (cb.checked) {
+                                                    foods.push(cb.value)
+                                                }
+                                            })
+                                            if (foods.length > 1) {
+                                                console.log("Hay 1")
+                                                const res = await fetch("../../modelo/Comida/comida.controller.php", {
+                                                    body: JSON.stringify(foods),
+                                                    method: "DELETE",
+                                                    headers: {
+                                                        "Content-Type": "application/json",
+                                                    }
+                                                })
+                                                const data = await res.json()
+                                                console.log(data)
+                                                tbody.innerHTML = ''
+                                                loadFoods()
+                                                Swal.fire(
+                                                    'Deleted!',
+                                                    'Your foods has been deleted.',
+                                                    'success'
+                                                )
+                                            } else {
+                                                console.log({
+                                                    id: foods[0]
+                                                })
+                                                const res = await fetch("../../modelo/Comida/comida.controller.php", {
+                                                    body: JSON.stringify({
+                                                        id: foods[0]
+                                                    }),
+                                                    method: "DELETE",
+                                                    headers: {
+                                                        "Content-Type": "application/json",
+                                                    }
+                                                })
+                                                const data = await res.json()
+                                                console.log(data)
+                                                tbody.innerHTML = ''
+                                                loadFoods()
+                                                Swal.fire(
+                                                    'Deleted!',
+                                                    'Your food has been deleted.',
+                                                    'success'
+                                                )
+                                            }
+                                        }
+                                    })
+
+                                })
                             }
-                        } else {
-                            inputFood.checked = true
-                            Food.classList.add("active-row")
-                            const cbFoods = document.querySelectorAll(".cbFood")
-                            const thName = document.querySelector("#th__name")
-                            const thImage = document.querySelector("#th__image")
-                            const thDiagnostic = document.querySelector("#th__diagnostic")
-                            const thOptions = document.querySelector("#th__options")
-                            let countFood = 0
-                            cbFoods.forEach(cb => {
-                                if (cb.checked) {
-                                    countFood++
-                                }
-                            })
-                            thName.innerHTML = `${countFood} foods selected`
-                            thImage.innerHTML = ""
-                            thDiagnostic.innerHTML = ""
-                            let btnDelete = document.createElement("button")
-                            btnDelete.innerHTML = "Delete foods"
-                            btnDelete.classList.add("button__delete")
-                            thOptions.innerHTML = ""
-                            thOptions.append(btnDelete)
-                        }
-                    })
-                });
+                        })
+                    });
+                }
             }
             loadFoods()
             const cbAll = document.querySelector("#cbAll")
@@ -213,11 +290,48 @@
                     thName.innerHTML = `${foodLenght} foods selected`
                     thImage.innerHTML = ""
                     thDiagnostic.innerHTML = ""
-                    let btnDelete = document.createElement("button")
-                    btnDelete.innerHTML = "Delete foods"
-                    btnDelete.classList.add("button__delete")
+                    let btnDeleteAll = document.createElement("button")
+                    btnDeleteAll.innerHTML = "Delete foods"
+                    btnDeleteAll.classList.add("button__delete")
                     thOptions.innerHTML = ""
-                    thOptions.append(btnDelete)
+                    thOptions.append(btnDeleteAll)
+                    btnDeleteAll.addEventListener("click", () => {
+                        Swal.fire({
+                            title: 'Are you sure?',
+                            text: "You won't be able to revert this!",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, delete foods!'
+                        }).then(async (result) => {
+                            if (result.isConfirmed) {
+                                let foods = []
+                                cbFoods.forEach(cb => {
+                                    if (cb.checked) {
+                                        foods.push(cb.value)
+                                    }
+                                })
+                                const res = await fetch("../../modelo/Comida/comida.controller.php", {
+                                    body: JSON.stringify(foods),
+                                    method: "DELETE",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    }
+                                })
+                                const data = await res.json()
+                                console.log(data)
+                                tbody.innerHTML = ''
+                                loadFoods()
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your food has been deleted.',
+                                    'success'
+                                )
+                            }
+                        })
+
+                    })
                 } else {
                     cbFoods.forEach(cb => {
                         cb.checked = false

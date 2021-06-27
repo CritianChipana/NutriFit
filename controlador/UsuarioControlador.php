@@ -52,5 +52,29 @@ class UsuarioControlador{
         
         return UsuarioDao::cambiarPassword($password,$nuevapass);
     }
+    public static function modificar($idusuario,$nombres,$apellidos,$dni,$sexo,
+    $telefono,$correo,$fecha_nacimiento,$direccion,$estado)
+    {
+        $obj_usuario = new Usuario();
+        $obj_usuario->setIdusuario($idusuario);
+        $obj_usuario->setNombres($nombres);
+        $obj_usuario->setApellidos($apellidos);
+        $obj_usuario->setDni($dni);
+        $obj_usuario->setSexo($sexo);
+        $obj_usuario->setTelefono($telefono);
+        $obj_usuario->setCorreo($correo);
+        $obj_usuario->setFecha_nacimiento($fecha_nacimiento);
+        $obj_usuario->setDireccion($direccion);
+        $obj_usuario->setEstado($estado);
+        return UsuarioDao::modificar($obj_usuario);
+    }
+
+    public static function listarusuariomod(){
+        return UsuarioDao::listarusuariomod();
+    }
+
+    public static function listarusuariomod2($idusu){
+        return UsuarioDao::listarusuariomod2($idusu);
+    }
 }
 

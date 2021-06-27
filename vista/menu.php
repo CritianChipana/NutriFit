@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="contenedor-item-menu">
-                    <a class="link-menu" href="#">
+                    <a class="link-menu" href="../vista/modificarpaciente.php">
                         <i class="fas fa-user-edit"></i>
                         <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
                     </a>
