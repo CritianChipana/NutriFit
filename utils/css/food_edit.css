@@ -37,21 +37,48 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 6rem;
 }
 main {
   width: 100%;
 }
 .header {
+  max-width: 160rem;
   width: 80%;
   margin: auto;
   background-color: var(--colorTable);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 4rem;
 }
 
 .header__title {
   font-size: 4.5rem;
   color: var(--colorLetra);
-  padding: 2rem 0rem;
-  text-align: center;
+  text-align: start;
+  flex: 4;
+}
+.header__back {
+  flex: 1;
+  display: block;
+  text-align: start;
+}
+.header__back a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  border: 0.1rem solid var(--colorVerdeFuerte);
+  padding: 1rem 2rem;
+  color: var(--colorVerdeFuerte);
+  background-color: var(--colorBlanco);
+}
+.header__back a:hover {
+  transition: all 0.3s;
+  border: 0.1rem solid var(--colorBlanco);
+  padding: 1rem 2rem;
+  color: var(--colorBlanco);
+  background-color: var(--colorVerdeFuerte);
 }
 table {
   width: 80%;
@@ -71,6 +98,9 @@ tr td img {
 thead {
   background-color: var(--bgColorTableHead);
 }
+tbody tr {
+  cursor: pointer;
+}
 tr th {
   padding: 2rem 2rem;
   font-size: 1.8rem;
@@ -79,6 +109,9 @@ tr th {
 }
 tr th:nth-child(1) {
   text-align: center;
+}
+.button__edit {
+  background-color: var(--colorVerdeFuerte);
 }
 tr td {
   padding: 1rem 2rem;
@@ -94,9 +127,9 @@ tr td:nth-child(2) {
 tr td:nth-child(4) {
   color: #374b61;
 }
-tr td button {
-  padding: 0.7rem 2rem;
-  width: 12rem;
+button {
+  padding: 1rem 2rem;
+  width: 15rem;
   color: var(--colorBlanco);
   border: none;
   margin-right: 1rem;
@@ -104,16 +137,29 @@ tr td button {
   border-radius: 1rem;
   cursor: pointer;
 }
-tr td button:nth-child(1) {
+tr td button {
   background-color: var(--colorVerdeFuerte);
 }
-tr td button:nth-child(2) {
-  background-color: var(--btnColorDelete);
-}
 tr:hover td {
+  background-color: var(--colorTableHover);
+}
+tr.active-row td {
   background-color: var(--colorTableHover);
 }
 tr {
   border: 0.1rem solid #ebf0f5;
   padding: 0rem 5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header {
+    gap: 2rem;
+  }
+  .header__title {
+    flex-basis: 100%;
+  }
+  .header__back {
+    flex-basis: 100%;
+  }
 }
