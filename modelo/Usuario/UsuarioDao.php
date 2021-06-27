@@ -244,6 +244,22 @@ class UsuarioDao extends Conexion
         }
         }*/
     }
+
+    public static function cambiarPassword($password,$nuevapass)
+    {
+        $query = "UPDATE usuario SET password=:nuevapass WHERE password=:password";
+        self::getConexion();
+        $resultado = self::$cnx->prepare($query); 
+        $resultado->bindValue(":password", $password);
+        $resultado->bindValue(":nuevapass", $nuevapass);
+        //$resultado->execute();
+
+        if ($resultado->execute()){
+            return true;
+        }
+        return false;
+
+    }
 }
 
 ?>

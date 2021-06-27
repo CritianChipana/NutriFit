@@ -135,11 +135,21 @@ class ComidaService
         try {
             $conexion = new Conexion();
             $db = $conexion->conectar();
-            $sql = "DELETE FROM comida WHERE idcomidas =:id";
-            $consulta = $db->prepare($sql);
-            $consulta->bindParam(':id', $food["id"]);
-            $consulta->execute();
-            return '{"ok":"true","msg":"Comida' . $food["id"] . ' eliminada con exito"}';
+            if (count($food) == 1) {
+                $sql = "DELETE FROM comida WHERE idcomidas =:id";
+                $consulta = $db->prepare($sql);
+                $consulta->bindParam(':id', $food["id"]);
+                $consulta->execute();
+                return '{"ok":"true","msg":"Comida' . $food["id"] . ' eliminada con exito"}';
+            } else {
+                foreach ($food as $item) {
+                    $sql = "DELETE FROM comida WHERE idcomidas =:id";
+                    $consulta = $db->prepare($sql);
+                    $consulta->bindParam(':id', $item);
+                    $consulta->execute();
+                }
+                return '{"ok":"true","msg":"' . count($food) . ' comidas eliminadas con exito"}';
+            }
         } catch (Exception $e) {
             return '{"ok":"false","msg":"' . $e . '}';
         }

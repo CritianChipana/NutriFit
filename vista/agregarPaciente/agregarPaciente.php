@@ -32,7 +32,7 @@ if (isset($_SESSION["usuario"])) {
             <h1>Nutri&FIT</h1>
         </div>
         <div class="content-Inicio">
-            <a href="#" style="text-decoration:none"><h2>Inicio</h2></a>
+            <a href="../menu.php" style="text-decoration:none"><h2>Inicio</h2></a>
         </div>
     </header>
     <section class="content-contenido">
