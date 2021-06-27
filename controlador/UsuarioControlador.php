@@ -47,5 +47,10 @@ class UsuarioControlador{
 
         return UsuarioDao::eliminarUsuario($idpac);
     }
+
+    public static function cambiarPassword($password,$nuevapass){
+        
+        return UsuarioDao::cambiarPassword($password,$nuevapass);
+    }
 }
 
