@@ -158,7 +158,7 @@ class UsuarioDao extends Conexion
             <td>" . $filas->fecha_nacimiento . "</td>
             <td>" . $filas->direccion . "</td>
             <td>" . $filas->estado . "</td>
-            <td><a href='modificarpaciente.php?idusu=" . $filas->idusuario . "'>Modificar Usuario</a></td>
+            <td><a href='modificarpaciente.php?idusu=" . $filas->idusuario . "'>Modificar</a></td>
         
                 </tr>";
             }
@@ -178,31 +178,32 @@ class UsuarioDao extends Conexion
             foreach ($filas as $filas) {
 ?>
                 
-                <div class="m-0 row justify-content-center align-items-center">
-                <div class="col-md-4 col-md-offset-4">
-                <form action="modificarCode.php" method="POST" role="form">
-                    <input value="<?php echo $filas->idusuario; ?>" name="txtidusuario" type="hidden">
-                    <label>Nombres:</label>
-                    <input type="text" name="txtnombres" placeholder="" value="<?php echo $filas->nombres; ?>"><br />
-                    <label>Apellidos:</label>
-                    <input type="text" name="txtapellidos" placeholder="" value="<?php echo $filas->apellidos; ?>"><br />
-                    <label>DNI:</label>
-                    <input type="text" name="txtdni" placeholder="" value="<?php echo $filas->dni; ?>"><br />
-                    <label>Sexo:</label>
-                    <input type="text" name="txtsexo" placeholder="" value="<?php echo $filas->sexo; ?>"><br />
-                    <label>Telefono:</label>
-                    <input type="text" name="txttelefono" placeholder="" value="<?php echo $filas->telefono; ?>"><br />
-                    <label>Correo:</label>
-                    <input type="text" name="txtcorreo" placeholder="" value="<?php echo $filas->correo; ?>"><br />
-                    <label>Fecha de Nacimiento:</label>
-                    <input type="text" name="txtfecha_nacimiento" placeholder="" value="<?php echo $filas->fecha_nacimiento; ?>"><br />
-                    <label>Direccion:</label>
-                    <input type="text" name="txtdireccion" placeholder="" value="<?php echo $filas->direccion; ?>"><br />
-                    <label>Estado:</label>
-                    <input type="text" name="txtestado" placeholder="" value="<?php echo $filas->estado; ?>"><br />
-                    <button name="actualizar" type="submit">Actualizar Registro</button>
-                </form>
-                </div></div>
+    <div class="contenedor-Modificar-paciente">
+        <div class="Distribucion-modificar">
+        <form action="modificarCode.php" method="POST" role="form" class="formularioModificarCode">
+            <input value="<?php echo $filas->idusuario; ?>" name="txtidusuario" type="hidden">
+            <label>Nombres:</label>
+            <input type="text" name="txtnombres" placeholder="" value="<?php echo $filas->nombres; ?>"><br />
+            <label>Apellidos:</label>
+            <input type="text" name="txtapellidos" placeholder="" value="<?php echo $filas->apellidos; ?>"><br />
+            <label>DNI:</label>
+            <input type="text" name="txtdni" placeholder="" value="<?php echo $filas->dni; ?>"><br />
+            <label>Sexo:</label>
+            <input type="text" name="txtsexo" placeholder="" value="<?php echo $filas->sexo; ?>"><br />
+            <label>Telefono:</label>
+            <input type="text" name="txttelefono" placeholder="" value="<?php echo $filas->telefono; ?>"><br />
+            <label>Correo:</label>
+            <input type="text" name="txtcorreo" placeholder="" value="<?php echo $filas->correo; ?>"><br />
+            <label>Fecha de Nacimiento:</label>
+            <input type="text" name="txtfecha_nacimiento" placeholder="" value="<?php echo $filas->fecha_nacimiento; ?>"><br />
+            <label>Direccion:</label>
+            <input type="text" name="txtdireccion" placeholder="" value="<?php echo $filas->direccion; ?>"><br />
+            <label>Estado:</label>
+            <input type="text" name="txtestado" placeholder="" value="<?php echo $filas->estado; ?>"><br />
+            <button class="comfirmar-mod" name="actualizar" type="submit">Actualizar Registro</button>
+        </form>
+        </div>
+    </div>
 <?php
             }
         }

@@ -1,0 +1,341 @@
+body{
+    /* background-color: aqua; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EAFFE2;
+    /* background-image: url(../../../img/fondo_modificar2.jpg); */
+
+}
+
+.contenedor-main-modificar{
+    margin: 15px;
+}
+/* ********************************** MARCA */
+
+.Contenedor-Marca{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Marca-logo{
+    display: flex;
+}
+
+.Contenedor-Marca p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.fa-fire-alt{
+    color: #FF922C;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+
+.titulo-modificar{
+    text-align: center;
+
+}
+
+.btn-atras-modificar{
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #FF922C;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+.btn-atras-modificar:hover{
+    opacity: 0.5;
+}
+
+.uil-arrow-left{
+    font-size: 25px;
+}
+/* ********************************* buscar paciente */
+
+.form-Buscar-Paciente{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+
+.form-Buscar-Paciente input{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 1px solid rgba(110, 90, 90,0.5);
+}
+
+.form-Buscar-Paciente input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #28750a;
+}
+
+
+.form-Buscar-Paciente button{
+    border: none;
+    background-color: #28750a;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.form-Buscar-Paciente button:hover{
+   opacity: 0.5;
+}
+
+/*/*********************************  table*/
+
+.conten{
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-pacientes-update{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 90%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+}
+
+.header-tabla-pacientes tr,th,.body-tabla-pacientes tr td{
+
+    padding: 10px;
+    /* border: 1px solid black; */
+
+}
+
+.header-tabla-pacientes{
+    background-color: #54BF29;
+    border-bottom: solid 5px #28750a;
+    color: white;
+}
+
+.body-tabla-pacientes a{
+
+    text-decoration: none;
+    padding: 10px;
+    background: #FF922C;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.body-tabla-pacientes a:hover{
+
+    opacity: 0.5;
+
+}
+
+
+.body-tabla-pacientes tr:nth-child(even){
+    background-color: #adc7a3;
+}
+
+
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa modificar */
+
+
+.contenedor-Modificar-paciente{
+
+    /* border: 1px solid black; */
+    background-color: #EAFFE2;
+    /* background-image: url(../../../img/fondo_modificar.jpg); */
+
+
+}
+
+.formularioModificarCode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.formularioModificarCode input[type="text"],
+.formularioModificarCode label
+ {
+
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    margin: 4px;
+    
+    
+}
+
+.formularioModificarCode input[type="text"]{
+    
+    border-bottom: 2px solid transparent;
+    border: 1px solid rgba(148, 146, 146,0.5);
+}
+
+.formularioModificarCode input[type="text"]:focus{
+    
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #28750a;
+    
+    
+}
+
+.formularioModificarCode .comfirmar-mod {
+
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    background-color: #54BF29;
+    border-radius: 15px;
+    margin: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    outline: none;
+
+}
+
+
+.formularioModificarCode .comfirmar-mod:hover{
+
+    opacity: 0.8;
+
+}
+
+
+/* asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  Tabla response */
+
+/* tabla responsiva */
+
+.content__table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+    .table__products{
+    /* width: 100%; */
+    background:#fff;
+    border-collapse: collapse;
+    /* border-radius: 20px; */
+    padding: 30px;
+    }
+    
+    .table__products tbody td, th { 
+    padding: 10px; 
+    text-align: left; 
+    }
+    .table__products tbody tr img{
+    height: 150px;
+    width: 100px;
+    }
+    
+    
+    .table__products tbody td button{
+    width: 5rem;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    /* border-radius: 10px; */
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid transparent 1px ; */
+    }
+    
+    @media (max-width: 1000px){
+    .table__products{
+        width: 100%;
+    }
+    }
+    
+    @media (max-width: 1200px){
+    
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+        font-size: 2vw;
+        border-collapse: collapse;
+
+
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .table__products thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .table__products tr{ 
+        /* border: 1px solid rgb(238, 238, 238);  */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 30%; 
+    }
+    
+    .table__products td { 
+    /* Behave  like a "row" */
+    border: none;
+    /* border-bottom: 1px solid rgb(238, 238, 238);  */
+    position: relative;
+        width: calc(100% - 5vw);
+    }
+    
+    .table__products td:before { 
+
+        position: absolute;
+
+        top: 6px;
+        left: -100px;
+        width: 45%; 
+        padding-right: 10px; 
+        display: block;
+        white-space: nowrap;
+            font-weight: 700;
+    }
+    
+    /*
+    Label the data
+    */
+    .table__products td:nth-of-type(1):before { content: "Nombre"; }
+    .table__products td:nth-of-type(2):before { content: "Ovalle"; }
+    .table__products td:nth-of-type(3):before { content: "DNI"; }
+    .table__products td:nth-of-type(4):before { content: "Sexo"; }
+    .table__products td:nth-of-type(5):before { content: "Telefono"; }
+    .table__products td:nth-of-type(6):before { content: "Correo"; }
+    .table__products td:nth-of-type(7):before { content: "Fecha"; }
+    .table__products td:nth-of-type(8):before { content: "Direccion"; }
+    .table__products td:nth-of-type(9):before { content: "Estado"; }
+    .table__products td:nth-of-type(10):before { content: ""; }
+
+
+
+    }
