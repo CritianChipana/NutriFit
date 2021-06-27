@@ -40,7 +40,7 @@
             <table class="table">
                 <thead class="thead">
                     <tr>
-                        <th>
+                        <th id="th__num">
                             #
                         </th>
                         <th id="th__name">
@@ -66,36 +66,57 @@
         "use strict"
         window.addEventListener("load", () => {
             const tbody = document.querySelector("tbody")
+            const thNum = document.querySelector("#th__num")
+            const thName = document.querySelector("#th__name")
+            const thImage = document.querySelector("#th__image")
+            const thDiagnostic = document.querySelector("#th__diagnostic")
+            const thOptions = document.querySelector("#th__options")
             const loadFoods = async () => {
                 const data = await fetch("../../modelo/Comida/comida.controller.php")
                 const foods = await data.json()
-                foods.forEach((food, index) => {
-                    let Food = document.createElement("tr")
-                    Food.classList.add("row-food")
-                    let idFood = document.createElement("td")
-                    idFood.innerHTML = index + 1
-                    let nameFood = document.createElement("td")
-                    nameFood.innerHTML = food.name
-                    let imageFood = document.createElement("td")
-                    let image = document.createElement("img")
-                    image.setAttribute("src", food.image)
-                    imageFood.appendChild(image)
-                    let diagnosticFood = document.createElement("td")
-                    diagnosticFood.innerHTML = food.diagnostic
-                    Food.appendChild(idFood)
-                    Food.appendChild(nameFood)
-                    Food.appendChild(imageFood)
-                    Food.appendChild(diagnosticFood)
-                    let btnFood = document.createElement("td")
-                    let btnEdit = document.createElement("button")
-                    btnEdit.innerHTML = "Edit"
-                    btnEdit.addEventListener("click", () => {
-                        window.location.replace(`./form_edit_food.php?id=` + food.id);
-                    })
-                    btnFood.appendChild(btnEdit)
-                    Food.appendChild(btnFood)
-                    tbody.appendChild(Food)
-                });
+                if (foods.error) {
+                    thName.innerHTML = ''
+                    const imgEmpty = document.createElement("img")
+                    imgEmpty.setAttribute("src", "https://www.muur.com.mx/images/empty_item.svg")
+                    imgEmpty.style.width = "60rem"
+                    const txtEmpty = document.createElement("h2")
+                    txtEmpty.innerHTML = "You do not have foods registered 🤦‍♂️🤦‍♂️🤦‍♂️"
+                    thName.appendChild(txtEmpty)
+                    thName.appendChild(imgEmpty)
+                    thName.style.textAlign = "center"
+                    thImage.style.display = "none"
+                    thDiagnostic.style.display = "none"
+                    thOptions.style.display = "none"
+                    thNum.style.display = "none"
+                } else {
+                    foods.forEach((food, index) => {
+                        let Food = document.createElement("tr")
+                        Food.classList.add("row-food")
+                        let idFood = document.createElement("td")
+                        idFood.innerHTML = index + 1
+                        let nameFood = document.createElement("td")
+                        nameFood.innerHTML = food.name
+                        let imageFood = document.createElement("td")
+                        let image = document.createElement("img")
+                        image.setAttribute("src", food.image)
+                        imageFood.appendChild(image)
+                        let diagnosticFood = document.createElement("td")
+                        diagnosticFood.innerHTML = food.diagnostic
+                        Food.appendChild(idFood)
+                        Food.appendChild(nameFood)
+                        Food.appendChild(imageFood)
+                        Food.appendChild(diagnosticFood)
+                        let btnFood = document.createElement("td")
+                        let btnEdit = document.createElement("button")
+                        btnEdit.innerHTML = "Edit"
+                        btnEdit.addEventListener("click", () => {
+                            window.location.replace(`./form_edit_food.php?id=` + food.id);
+                        })
+                        btnFood.appendChild(btnEdit)
+                        Food.appendChild(btnFood)
+                        tbody.appendChild(Food)
+                    });
+                }
             }
             loadFoods()
         })

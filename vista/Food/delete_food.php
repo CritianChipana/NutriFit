@@ -66,27 +66,30 @@
         "use strict"
         window.addEventListener("load", () => {
             const tbody = document.querySelector("tbody")
+            const thCb = document.querySelector("#th__cb")
+            const thName = document.querySelector("#th__name")
+            const thImage = document.querySelector("#th__image")
+            const thDiagnostic = document.querySelector("#th__diagnostic")
+            const thOptions = document.querySelector("#th__options")
             const loadFoods = async () => {
                 const data = await fetch("../../modelo/Comida/comida.controller.php")
                 const foods = await data.json()
                 if (foods.error) {
-                    const thCb = document.querySelector("#th__cb")
-                    const thName = document.querySelector("#th__name")
-                    const thImage = document.querySelector("#th__image")
-                    const thDiagnostic = document.querySelector("#th__diagnostic")
-                    const thOptions = document.querySelector("#th__options")
                     thCb.style.display = "none"
-                    thName.innerHTML = `You do not have foods registered`
+                    thName.innerHTML = ''
+                    const imgEmpty = document.createElement("img")
+                    imgEmpty.setAttribute("src", "https://www.muur.com.mx/images/empty_item.svg")
+                    imgEmpty.style.width = "60rem"
+                    const txtEmpty = document.createElement("h2")
+                    txtEmpty.innerHTML = "You do not have foods registered 🤦‍♂️🤦‍♂️🤦‍♂️"
+                    thName.appendChild(txtEmpty)
+                    thName.appendChild(imgEmpty)
                     thName.style.textAlign = "center"
                     thImage.style.display = "none"
                     thDiagnostic.style.display = "none"
                     thOptions.style.display = "none"
                 } else {
                     foods.forEach((food) => {
-                        const thName = document.querySelector("#th__name")
-                        const thImage = document.querySelector("#th__image")
-                        const thDiagnostic = document.querySelector("#th__diagnostic")
-                        const thOptions = document.querySelector("#th__options")
                         thName.innerHTML = `Name`
                         thImage.innerHTML = "Image"
                         thDiagnostic.innerHTML = "Diagnostic"
@@ -138,7 +141,6 @@
                                         }
                                     })
                                     const data = await res.json()
-                                    console.log(data)
                                     tbody.innerHTML = ''
                                     loadFoods()
                                     Swal.fire(
@@ -149,20 +151,14 @@
                                 }
                             })
                         })
-                        // btnFood.appendChild(btnEdit)
                         btnFood.appendChild(btnDelete)
                         Food.appendChild(btnFood)
                         tbody.appendChild(Food)
-
                         Food.addEventListener("click", () => {
                             if (inputFood.checked) {
                                 inputFood.checked = false
                                 Food.classList.remove("active-row")
                                 const cbFoods = document.querySelectorAll(".cbFood")
-                                const thName = document.querySelector("#th__name")
-                                const thImage = document.querySelector("#th__image")
-                                const thDiagnostic = document.querySelector("#th__diagnostic")
-                                const thOptions = document.querySelector("#th__options")
                                 let countFood = 0
                                 cbFoods.forEach(cb => {
                                     if (cb.checked) {
@@ -188,10 +184,6 @@
                                 inputFood.checked = true
                                 Food.classList.add("active-row")
                                 const cbFoods = document.querySelectorAll(".cbFood")
-                                const thName = document.querySelector("#th__name")
-                                const thImage = document.querySelector("#th__image")
-                                const thDiagnostic = document.querySelector("#th__diagnostic")
-                                const thOptions = document.querySelector("#th__options")
                                 let countFood = 0
                                 cbFoods.forEach(cb => {
                                     if (cb.checked) {
@@ -255,7 +247,6 @@
                                                     }
                                                 })
                                                 const data = await res.json()
-                                                console.log(data)
                                                 tbody.innerHTML = ''
                                                 loadFoods()
                                                 Swal.fire(
@@ -277,10 +268,6 @@
             const cbAll = document.querySelector("#cbAll")
             cbAll.addEventListener("click", () => {
                 const cbFoods = document.querySelectorAll(".cbFood")
-                const thName = document.querySelector("#th__name")
-                const thImage = document.querySelector("#th__image")
-                const thDiagnostic = document.querySelector("#th__diagnostic")
-                const thOptions = document.querySelector("#th__options")
                 if (cbAll.checked) {
                     let foodLenght = cbFoods.length
                     cbFoods.forEach(cb => {
@@ -320,7 +307,6 @@
                                     }
                                 })
                                 const data = await res.json()
-                                console.log(data)
                                 tbody.innerHTML = ''
                                 loadFoods()
                                 Swal.fire(
