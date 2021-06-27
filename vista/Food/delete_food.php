@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Css-->
-    <link rel="stylesheet" href="../../utils/css/foods.css">
+    <link rel="stylesheet" href="../../utils/css/food_delete.css">
     <!--GoogleFonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -50,7 +50,7 @@
                             Image
                         </th>
                         <th id="th__diagnostic">Diagnostic</th>
-                        <th id="th__options">Options</th>
+                        <th id="th__options">Option</th>
                     </tr>
                 </thead>
                 <tbody class="tbody">
@@ -69,8 +69,7 @@
             const loadFoods = async () => {
                 const data = await fetch("../../modelo/Comida/comida.controller.php")
                 const foods = await data.json()
-                foods.forEach(async (food) => {
-                    tbody.innerHTML = ''
+                foods.forEach((food) => {
                     const thName = document.querySelector("#th__name")
                     const thImage = document.querySelector("#th__image")
                     const thDiagnostic = document.querySelector("#th__diagnostic")
@@ -93,10 +92,8 @@
                     let image = document.createElement("img")
                     image.setAttribute("src", food.image)
                     imageFood.appendChild(image)
-                    const dataDiagnostic = await fetch("../../modelo/Diagnostico/diagnostico.controller.php?id=" + food.idDiagnostic)
-                    const diagnostic = await dataDiagnostic.json()
                     let diagnosticFood = document.createElement("td")
-                    diagnosticFood.innerHTML = diagnostic.name
+                    diagnosticFood.innerHTML = food.diagnostic
                     Food.appendChild(idFood)
                     Food.appendChild(nameFood)
                     Food.appendChild(imageFood)
@@ -128,7 +125,7 @@
                                     }
                                 })
                                 const data = await res.json()
-                                console.log(data)
+                                tbody.innerHTML = ''
                                 loadFoods()
                                 Swal.fire(
                                     'Deleted!',

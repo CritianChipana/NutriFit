@@ -20,6 +20,8 @@ class ComidaService
                 "ingredients" => $fila["ingredientes"],
                 "preparation" => $fila["preparacion"],
                 "preparationVideo" => $fila["video"],
+                "estadofav" => $fila["estadofav"],
+                "iddiagnostico" => $fila["iddiagnostico"],
             );
         }
         if (empty($vector[0])) {
@@ -36,7 +38,7 @@ class ComidaService
         $vector = array();
         $conexion = new Conexion();
         $db = $conexion->conectar();
-        $sql = "SELECT * FROM comida";
+        $sql = "SELECT c.*,d.nombre as diagnostico FROM comida as c INNER JOIN diagnostico as d on d.iddiagnostico=c.iddiagnostico";
         $consulta = $db->prepare($sql);
         $consulta->execute();
         while ($fila = $consulta->fetch()) {
@@ -48,7 +50,7 @@ class ComidaService
                 "ingredients" => $fila["ingredientes"],
                 "preparation" => $fila["preparacion"],
                 "preparationVideo" => $fila["video"],
-                "idDiagnostic" => $fila["iddiagnostico"],
+                "diagnostic" => $fila["diagnostico"],
             );
         }
         if (empty($vector[0])) {
@@ -109,6 +111,22 @@ class ComidaService
             return '{"ok":"true","msg":"Comida agregada con exito"}';
         } catch (Exception $e) {
             return $e;
+        }
+    }
+
+    public function updateFood($food)
+    {
+        try {
+            $conexion = new Conexion();
+            $db = $conexion->conectar();
+            $sql = "UPDATE comida SET nombre='" . $food["name"] . "',ingredientes='" . $food["ingredients"] . "',descripcion='"
+                . $food["description"] . "',preparacion='" . $food["preparation"] . "',imagen='" . $food["image"] . "',video='" .
+                $food["video"] . "',estadofav=" . $food["estadofav"] . ",iddiagnostico=" . $food["diagnosis"] . " WHERE idcomidas=" . $food["id"];
+            $consulta = $db->prepare($sql);
+            $consulta->execute();
+            return '{"ok":"true","msg":"Comida actualizada con exito"}';
+        } catch (Exception $e) {
+            return $e . $sql;
         }
     }
 

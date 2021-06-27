@@ -110,8 +110,8 @@ tr th {
 tr th:nth-child(1) {
   text-align: center;
 }
-.button__delete {
-  background-color: var(--btnColorDelete);
+.button__edit {
+  background-color: var(--colorVerdeFuerte);
 }
 tr td {
   padding: 1rem 2rem;
@@ -138,7 +138,7 @@ button {
   cursor: pointer;
 }
 tr td button {
-  background-color: var(--btnColorDelete);
+  background-color: var(--colorVerdeFuerte);
 }
 tr:hover td {
   background-color: var(--colorTableHover);
@@ -149,4 +149,17 @@ tr.active-row td {
 tr {
   border: 0.1rem solid #ebf0f5;
   padding: 0rem 5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header {
+    gap: 2rem;
+  }
+  .header__title {
+    flex-basis: 100%;
+  }
+  .header__back {
+    flex-basis: 100%;
+  }
 }

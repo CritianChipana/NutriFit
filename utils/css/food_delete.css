@@ -1,0 +1,163 @@
+:root {
+  --colorLetra: black;
+  --colorVerdeFuerte: #54bf29;
+  --colorBlanco: #ffff;
+  --colorVerdeIntermedio: #e9f8f5;
+  --colorVerdeSuave: #eaffe2;
+  --colorNaranja: #ff922c;
+  --colorNaranjaSuave: #ffeede;
+  --colorSombra: rgba(56, 47, 47, 0.692);
+  --colorShadowCards: #e09045;
+  --bgColorFooter: #1d1d1d;
+  --bgcolorPreparation: #f3f3f3;
+  --bgcolorIngredients: #f2f4f8;
+  --colorInput: #4c5d65;
+  --colorBorderInput: #bac6c4;
+  --colorDescriptionForm: #21313c;
+  --colorTable: #ffffff;
+  --colorTableHover: #f7f9fc;
+  --bgColorTableHead: #f7f9fc;
+  --btnColorDelete: #f13426;
+}
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  color: var(--colorLetra);
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../../img/bgFoods.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 6rem;
+}
+main {
+  width: 100%;
+}
+.header {
+  max-width: 160rem;
+  width: 80%;
+  margin: auto;
+  background-color: var(--colorTable);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.header__title {
+  font-size: 4.5rem;
+  color: var(--colorLetra);
+  text-align: start;
+  flex: 4;
+}
+.header__back {
+  flex: 1;
+  display: block;
+  text-align: start;
+}
+.header__back a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  border: 0.1rem solid var(--colorVerdeFuerte);
+  padding: 1rem 2rem;
+  color: var(--colorVerdeFuerte);
+  background-color: var(--colorBlanco);
+}
+.header__back a:hover {
+  transition: all 0.3s;
+  border: 0.1rem solid var(--colorBlanco);
+  padding: 1rem 2rem;
+  color: var(--colorBlanco);
+  background-color: var(--colorVerdeFuerte);
+}
+table {
+  width: 80%;
+  max-width: 160rem;
+  margin: auto;
+  border: 0.1rem solid #ebf0f5;
+  border-collapse: collapse;
+}
+
+tr td img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+}
+thead {
+  background-color: var(--bgColorTableHead);
+}
+tbody tr {
+  cursor: pointer;
+}
+tr th {
+  padding: 2rem 2rem;
+  font-size: 1.8rem;
+  text-align: start;
+  color: #042040;
+}
+tr th:nth-child(1) {
+  text-align: center;
+}
+.button__delete {
+  background-color: var(--btnColorDelete);
+}
+tr td {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: var(--colorTable);
+}
+tr td:nth-child(1) {
+  text-align: center;
+}
+tr td:nth-child(2) {
+  color: #818d9c;
+}
+tr td:nth-child(4) {
+  color: #374b61;
+}
+button {
+  padding: 1rem 2rem;
+  width: 15rem;
+  color: var(--colorBlanco);
+  border: none;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+tr td button {
+  background-color: var(--btnColorDelete);
+}
+tr:hover td {
+  background-color: var(--colorTableHover);
+}
+tr.active-row td {
+  background-color: var(--colorTableHover);
+}
+tr {
+  border: 0.1rem solid #ebf0f5;
+  padding: 0rem 5rem;
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    gap: 2rem;
+  }
+  .header__title {
+    flex-basis: 100%;
+  }
+  .header__back {
+    flex-basis: 100%;
+  }
+}
