@@ -48,9 +48,9 @@ class UsuarioControlador{
         return UsuarioDao::eliminarUsuario($idpac);
     }
 
-    public static function cambiarPassword($password,$nuevapass){
+    public static function cambiarPassword($idUsuario,$nuevapass,$passwordOld){
         
-        return UsuarioDao::cambiarPassword($password,$nuevapass);
+        return UsuarioDao::cambiarPassword($idUsuario,$nuevapass,$passwordOld);
     }
     public static function modificar($idusuario,$nombres,$apellidos,$dni,$sexo,
     $telefono,$correo,$fecha_nacimiento,$direccion,$estado)

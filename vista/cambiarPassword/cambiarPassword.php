@@ -1,18 +1,14 @@
 <?php
-    if (isset($_SESSION["usuario"])) {
-        if ($_SESSION["usuario"]["idrol"] == 1){
-            header("location:menu.php");
-        }elseif ($_SESSION["usuario"]["idrol"] == 2){
-            header("location:home.php");
-        }
-
-    }
 
     //FORMULARIO CAMBIO DE PASSWORD
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+    
+        session_start();
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +19,11 @@
     <title> Cambiar Contraseña </title>
 </head>
 <body>
+    <?php
+    
+        $idusu = $_SESSION["usuario"]["id"];
+
+    ?>
     <header class="headerCambiarContraseña">
         
         <div class="contInicio">
@@ -45,7 +46,7 @@
             </div>
 
             <div class="contCampos">
-
+                <input type="hidden" name = "idusuario" value="<?php echo $idusu ?>" >
                 <input id="i1" type="password" name="txtpassword" required class="form-control" placeholder="Ingrese su contraseña actual">
                 <input id="i2" type="password" name="nuevapass" required class="form-control" placeholder="Ingrese su nueva contraseña">
                 <input id="i3" type="password" name="confirmarpass" required class="form-control" placeholder="Confirme su nueva contraseña">

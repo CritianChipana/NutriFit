@@ -245,21 +245,32 @@ class UsuarioDao extends Conexion
         }*/
     }
 
-    public static function cambiarPassword($password,$nuevapass)
+    public static function cambiarPassword($idusuario,$nuevapass,$passwordold)
     {
-        $query = "UPDATE usuario SET password=:nuevapass WHERE password=:password";
+        try{
+        
+    
+        $query = "UPDATE usuario SET password=:nuevapass WHERE password=:passwordold  and idusuario=:idusuario";
         self::getConexion();
         $resultado = self::$cnx->prepare($query); 
-        $resultado->bindValue(":password", $password);
+        $resultado->bindValue(":idusuario", $idusuario);
         $resultado->bindValue(":nuevapass", $nuevapass);
+        $resultado->bindValue(":passwordold", $passwordold);
         //$resultado->execute();
-
+        
         if ($resultado->execute()){
             return true;
-        }
-        return false;
+        }else{
 
-    }
+            return false;
+        }
+
+        }catch(PDOException $e){
+            $e->getMessage("ERROR->>>>> $e");
+        
+        }
+
+}
 }
 
 ?>

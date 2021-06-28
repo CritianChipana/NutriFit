@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             );¨
           
-             */    header("location:menu.php");
+             */    header("location:assets/mensajes/guardar_exito.html");
             }
            
         } 

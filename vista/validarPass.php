@@ -11,12 +11,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $txtpassword=validar_campo($_POST["txtpassword"]);
         $nuevapass= validar_campo($_POST["nuevapass"]);
         $confirmarpass=validar_campo($_POST["confirmarpass"]);
+        $idUsuario = validar_campo($_POST["idusuario"]);
 
-        if(UsuarioControlador::cambiarPassword($txtpassword,$nuevapass))
+        if(UsuarioControlador::cambiarPassword($idUsuario,$nuevapass,$txtpassword))
         {
+            echo "bueno";
             header("location:cambiarPassword/exitocambiarpass.php");
         }else{
-            header("location:cambiarPassword/exitocambiarpass.php");
+            header("location:assets/mensajes/btn_vrfguar.html");
+            echo "malo";
+
         }           
         
     }
