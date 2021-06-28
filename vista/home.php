@@ -46,7 +46,7 @@
         <nav class="header-nav">
           <ul class="nav-list">
             <li><a href="#root">Foods</a></li>
-            <li><a href="">Exercises</a></li>
+            <li><a href="ejercicio_vista.php">Exercises</a></li>
             <li><a href="../vista/cambiarPassword/cambiarPassword.php">Cambiar Contraseña</a></li>
             <li><a href="cerrar-sesion.php">Cerrar Session</a></li>
           </ul>
