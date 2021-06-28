@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <?php 
-        session_start();
+        // session_start();
     ?>
 
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
         </div>
 <?php  
         if (isset($_SESSION["usuario"])) {
-            include 'partials/menu.php';
+            // include 'partials/menu.php';a
             ?>
             <h2 class="titulo-ejercicio" >Ejercicios</h2>
             <div class="content-sport">
