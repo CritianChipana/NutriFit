@@ -45,11 +45,15 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
+    border: 2px solid transparent;
 }
 
 
 .btn-atras-modificar:hover{
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    border: 2px solid #FF922C;
+    background-color: #ffffff;
+    color: #FF922C;
 }
 
 .uil-arrow-left{
@@ -78,6 +82,7 @@
     /* border: 1px solid black; */
     padding: 40px;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 
 }
 
@@ -86,13 +91,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border: 1px solid black; */
+    border: 1px solid rgba(167, 167, 167,0.3);
     text-align: center;
-    padding: 30px;
+    padding: 15px;
     border-radius: 15px;
     background: #ffffff;
+    box-shadow:  5px 5px 8px #f5f5f5,
+                -5px -5px 8px #ffffff;
+
+}
+
+.card-sport:hover{
+    position: relative;
+    bottom: 10px;
     box-shadow:  5px 5px 10px #666666,
                 -5px -5px 10px #ffffff;
+
 }
 
 
@@ -101,7 +115,6 @@
     margin-bottom: 0;
     font-weight: 300;
     font-size: 20px;
-
 
 }
 
@@ -112,28 +125,19 @@
     color: #ffffff;
     font-size: 18px;
     border-radius: 15px;
-    /* padding: 50%; */
     display: inline-block;
-    /* padding-left: 30px;
-    padding-right: 30px; */
     width: 200px;
 
     background-color: #FF922C;
     background-color: #54BF29;
-    background-color: #54BF29;
-    background-color: #54BF29;
-    background-color: #54BF29;
-    background-color: #54BF29;
-    background-color: #54BF29;
-    background-color: #54BF29;
+    border: 2px solid transparent;
 
 }
 
-.card-sport .card-sport-name{
-    font-size: 20px;
-    color: rgb(155, 153, 153);
-    background-color: #FF922C;
-
+.card-sport a:hover{
+    border: 2px solid #54BF29;
+    color: #54BF29;
+    background-color: #ffffff;
 
 }
 
