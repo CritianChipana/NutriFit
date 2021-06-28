@@ -21,7 +21,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <link rel="icon" href="vistaHomeNutriF/imgs/favicon.ico">
+    <title>NutriFit</title>
 </head>
 <body>
     <div class="contenedor-login-screem">
@@ -35,9 +36,9 @@
                 <div class="contenedor-login">
                     <h3 >Login</h3>
                     <!-- <label for="">Cuenta:</label> -->
-                    <input type="text" name="txtusuario" placeholder="2020230478">
+                    <input type="text" name="txtusuario" required placeholder="2020230478">
                     <!-- <label for="">Contraseña:</label> -->
-                    <input type="password" name="txtpassword" placeholder="**********" >
+                    <input type="password" name="txtpassword" required placeholder="**********" >
                     <a class="link-olvide-contra" href="#">Olvide mi contraseña</a>
                     <input type="submit" value="Ingresar">
                 </div>

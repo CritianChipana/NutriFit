@@ -25,12 +25,16 @@ class EjercicioDao extends Conexion
         $filas = $resultado->fetchAll(PDO::FETCH_OBJ);
         if ($resultado->rowCount() > 0) {
             foreach ($filas as $filas) {
-                echo "<tr class='contenido'>
-            <td>" . $filas->nombreE . "</td>
-            <td><img src='" . $filas->imgE . "'></img></td>
-            <td><a class='boton' href='descripcion_ejercicio.php?idej=" . $filas->idejercicio . "'>Ver mas</a></td>
-
-            </tr>";
+                echo 
+                "<div class='card-sport'>
+                    <p>" . $filas->nombreE ."</p>
+                    <div class='contenedor-img-ejercicio'>
+                        <img src='" . $filas->imgE . "'></img>
+                    </div>
+                    <div>
+                        <a class='boton' href='descripcion_ejercicio.php?idej=" . $filas->idejercicio . "'>Ver mas</a>
+                    </div>
+                </div>";
             }
         }
     }
