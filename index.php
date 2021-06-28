@@ -6,7 +6,7 @@ if (isset($_SESSION["usuario"])) {
         header("location:home.php");
     }
 } else {
-    header("location:vista/login.php");
+    header("location:vista/index.php");
 }
 ?>
 <?php include 'partials/menu.php'   ?>
