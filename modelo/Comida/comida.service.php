@@ -63,6 +63,36 @@ class ComidaService
     }
 
 
+    public function getFoodsWithDiagnostic($idusuario)
+    {
+        $vector = array();
+        $conexion = new Conexion();
+        $db = $conexion->conectar();
+        $sql = "SELECT * FROM bdscrum.comida WHERE idusuario = :idusuario";
+        $consulta = $db->prepare($sql);
+        $consulta->bindParam(':idusuario', $idusuario);
+        $consulta->execute();
+        while ($fila = $consulta->fetch()) {
+            $vector[] = array(
+                "id" => $fila['idcomidas'],
+                "name" => $fila['nombre'],
+                "description" => $fila['descripcion'],
+                "image" => $fila['imagen'],
+                "ingredients" => $fila["ingredientes"],
+                "preparation" => $fila["preparacion"],
+                "preparationVideo" => $fila["video"],
+                "diagnostic" => $fila["diagnostico"],
+            );
+        }
+        if (empty($vector[0])) {
+            $error = array();
+            $error[] = array("error" => "No hay comidas en db");
+            return $error[0];
+        } else {
+            return $vector;
+        }
+    }
+
     public function getFavoriteFoods()
     {
         $vector = array();
@@ -110,7 +140,7 @@ class ComidaService
             $consulta->execute();
             return '{"ok":"true","msg":"Comida agregada con exito"}';
         } catch (Exception $e) {
-            return $e;
+            return '{"ok":"false","msg":"' . $e . '}';
         }
     }
 
@@ -126,7 +156,7 @@ class ComidaService
             $consulta->execute();
             return '{"ok":"true","msg":"Comida actualizada con exito"}';
         } catch (Exception $e) {
-            return $e . $sql;
+            return '{"ok":"false","msg":"' . $e . '}';
         }
     }
 
@@ -155,20 +185,17 @@ class ComidaService
         }
     }
 
-
-
     public function addToFavoriteFood($food)
     {
         try {
             $conexion = new Conexion();
             $db = $conexion->conectar();
-            $sql = "UPDATE comida SET  estadofav=1 WHERE idcomidas=:idcomida";
+            $sql = "UPDATE comida SET  estadofav=1 WHERE idcomidas=" . $food["id"];
             $consulta = $db->prepare($sql);
-            $consulta->bindParam(':idcomida', $food["id"]);
             $consulta->execute();
-            return '{"ok":"true","msg":"Comida agregada a favoritos con exito"}';
+            return '{"ok":"true","msg":"Comida numero' . $food["id"] . ' agregada a favoritos con exito"}';
         } catch (Exception $e) {
-            return $e;
+            return '{"ok":"false","msg":"' . $e . '}';
         }
     }
 }
