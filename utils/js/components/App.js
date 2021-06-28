@@ -32,7 +32,7 @@ const NotFoods = () => {
 const Foods = () => {
   const [foods, setFoods] = React.useState([]);
   React.useEffect(() => {
-    fetch("../modelo/Comida/comida.controller.php")
+    fetch("../modelo/Comida/favorito.controller.php")
       .then((data) => data.json())
       .then((foods) => {
         setFoods(foods);
@@ -41,7 +41,7 @@ const Foods = () => {
   }, []);
   return (
     <section className="foods">
-      <h3 className="foods-title">Foods</h3>
+      <h3 className="foods-title">Favorite Foods</h3>
       {foods.error ? (
         <NotFoods />
       ) : (
