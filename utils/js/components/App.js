@@ -5,15 +5,26 @@ const Food = ({ id, name, image }) => {
   };
   return (
     <>
-      <article class="food">
-        <picture class="food-image">
+      <article className="food">
+        <picture className="food-image">
           <img src={image} alt={name} />
         </picture>
-        <h4 class="food-title">{name}</h4>
-        <div class="food-button">
+        <h4 className="food-title">{name}</h4>
+        <div className="food-button">
           <a onClick={handleNavigate}>Ver más</a>
         </div>
       </article>
+    </>
+  );
+};
+
+const NotFoods = () => {
+  return (
+    <>
+      <h3 className="foods-title">Not food found</h3>
+      <picture className="notfound__image">
+        <img src="https://www.muur.com.mx/images/empty_item.svg" />
+      </picture>
     </>
   );
 };
@@ -28,13 +39,21 @@ const Foods = () => {
       })
       .catch((e) => console.log("Error", e));
   }, []);
-  console.log(foods);
   return (
-    <section class="foods">
-      <h3 class="foods-title">Foods</h3>
-      {foods.map((food) => (
-        <Food key={food.id} name={food.name} id={food.id} image={food.image} />
-      ))}
+    <section className="foods">
+      <h3 className="foods-title">Foods</h3>
+      {foods.error ? (
+        <NotFoods />
+      ) : (
+        foods.map((food) => (
+          <Food
+            key={food.id}
+            name={food.name}
+            id={food.id}
+            image={food.image}
+          />
+        ))
+      )}
     </section>
   );
 };
@@ -42,9 +61,7 @@ const Foods = () => {
 const Main = () => {
   return (
     <>
-      <div className="se">
-        <Foods />
-      </div>
+      <Foods />
     </>
   );
 };

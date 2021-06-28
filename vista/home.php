@@ -72,7 +72,7 @@
               <h4 class="card-title">Envianos tus sugerencias</h4>
               <p class="card-description">
                 Sabemos que conoces de alguna receta que puede resultar perfecta para algunas
-                personas, puedes enviarnos tus recomendaciones y sugerencias 
+                personas, puedes enviarnos tus recomendaciones y sugerencias
               </p>
               <div class="card-button">
                 <a href="">Realizar sugerencia</a>
@@ -170,10 +170,10 @@
   </div>
   <script type="text/javascript">
     var typed = new Typed('.element', {
-      strings: ["Somos lo que comemos :D", "Nutri Fit"],
+      strings: ["Come bien", "Vive bien", "NutriFit"],
       typeSpeed: 50,
       startDelay: 1500,
-      backSpeed: 50,
+      backSpeed: 100,
     });
   </script>
   <script class="text/javascript" src="../utils/js/hamburger.js"></script>

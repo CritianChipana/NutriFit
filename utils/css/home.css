@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 7rem;
+  font-size: 5rem;
   min-height: 100vh;
   background-image: url("../../img/wave.svg");
   background-position: center;
@@ -45,7 +45,7 @@
   padding: 2rem 0rem;
 }
 .info-cards {
-  padding: 2rem 2rem ;
+  padding: 2rem 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -169,7 +169,13 @@
   color: var(--colorNaranja);
   border: 1px solid var(--colorNaranja);
 }
-
+.notfound__image {
+  flex-basis: 100%;
+}
+.notfound__image img {
+  width: 100%;
+  max-width: 40rem;
+}
 @media screen and (min-width: 768px) {
   .food {
     flex-basis: 40%;
@@ -177,6 +183,13 @@
   }
   .main-title {
     font-size: 12rem;
+  }
+  .notfound__image {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .notfound__image img {
+    max-width: 60rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -188,5 +201,8 @@
   }
   .main-title {
     font-size: 16rem;
+  }
+  .notfound__image img {
+    max-width: 80rem;
   }
 }
