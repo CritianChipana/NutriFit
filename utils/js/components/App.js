@@ -31,6 +31,7 @@ const NotFoods = () => {
 
 const Foods = () => {
   const [foods, setFoods] = React.useState([]);
+  let idUsuario = document.querySelector("#idUsuario").value;
   React.useEffect(() => {
     fetch("../modelo/Comida/favorito.controller.php")
       .then((data) => data.json())

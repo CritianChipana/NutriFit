@@ -36,7 +36,7 @@
     header("location:login.php");
   }
   ?>
-
+  <input id="idUsuario" type="hidden" value="<?php echo $idusu = $_SESSION["usuario"]["id"]; ?>">
   <div class="loader">
     <div class="container">
       <header class="header">
