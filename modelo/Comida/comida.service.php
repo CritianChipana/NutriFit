@@ -50,6 +50,7 @@ class ComidaService
                 "ingredients" => $fila["ingredientes"],
                 "preparation" => $fila["preparacion"],
                 "preparationVideo" => $fila["video"],
+                "estadofav" => $fila["estadofav"],
                 "diagnostic" => $fila["diagnostico"],
             );
         }
@@ -198,4 +199,18 @@ class ComidaService
             return '{"ok":"false","msg":"' . $e . '}';
         }
     }
+    public function removeToFavoriteFood($food)
+    {
+        try {
+            $conexion = new Conexion();
+            $db = $conexion->conectar();
+            $sql = "UPDATE comida SET  estadofav=2 WHERE idcomidas=" . $food["id"];
+            $consulta = $db->prepare($sql);
+            $consulta->execute();
+            return '{"ok":"true","msg":"Comida numero' . $food["id"] . ' agregada a favoritos con exito"}';
+        } catch (Exception $e) {
+            return '{"ok":"false","msg":"' . $e . '}';
+        }
+    }
+
 }
