@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <!--FontAwasome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <!-- Logo -->
+    <link rel="icon" href="../vistaHomeNutriF/imgs/favicon.ico">
+    <title>Eliminar Comida</title>
 
 </head>
 
@@ -121,13 +123,13 @@
                         btnDelete.innerHTML = "Delete"
                         btnDelete.addEventListener("click", () => {
                             Swal.fire({
-                                title: 'Are you sure?',
-                                text: "You won't be able to revert this!",
+                                title: 'Esta Seguro?',
+                                text: "¡No podrás revertir esto!",
                                 icon: 'warning',
                                 showCancelButton: true,
                                 confirmButtonColor: '#3085d6',
                                 cancelButtonColor: '#d33',
-                                confirmButtonText: 'Yes, delete food!'
+                                confirmButtonText: '¡Sí, elimine la comida!'
                             }).then(async (result) => {
                                 if (result.isConfirmed) {
                                     let foodId = {
@@ -144,8 +146,8 @@
                                     tbody.innerHTML = ''
                                     loadFoods()
                                     Swal.fire(
-                                        'Deleted!',
-                                        'Your food has been deleted.',
+                                        'Eliminado',
+                                        'Tu comida fue eliminada',
                                         'success'
                                     )
                                 }

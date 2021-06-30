@@ -10,6 +10,8 @@
     <!-- <link rel="stylesheet" href="asseelim_reg_paci.css"> -->
     <link rel="stylesheet" href="assets/css/elim_reg_paci.css">
     <title>Nutri&Fit - Eliminar Registro del Paciente</title>
+    <link rel="icon" href="vistaHomeNutriF/imgs/favicon.ico">
+
 </head>
 
 <body>

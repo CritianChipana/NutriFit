@@ -38,7 +38,7 @@ class EjercicioDao extends Conexion
             }
         }
     }
-
+// <a href=''></a>
     public static function listarDescripcionEjercicio($idej)
     {
         $query = "SELECT e.idejercicio, e.nombreE, e.tipoE, e.videoE, e.repeticionesE, e.cantidadE, e.imgE, e.descripcionE 
@@ -52,15 +52,17 @@ class EjercicioDao extends Conexion
         $filas = $resultado->fetchAll(PDO::FETCH_OBJ);
         if ($resultado->rowCount() > 0) {
             foreach ($filas as $filas) {
-                echo "<tr class='contenido'>
-            <td>" . $filas->nombreE . "</td>
-            <td>" . $filas->tipoE . "</td>
-            <td>" . $filas->videoE . "</td>
-            <td>" . $filas->repeticionesE . "</td>
-            <td>" . $filas->cantidadE . "</td>
-            <td><img src='" . $filas->imgE . "'></img></td>
-            <td>" . $filas->descripcionE . "</td>
-            </tr>";
+                echo "<div class='contenido'>
+                <figure><img src='" . $filas->imgE . "'></img></figure>
+                <div class='info-ejemplos' >
+            <p class='contenido-titulo'> " . $filas->nombreE . "</p>
+            <p class='contenido-titulo2'><b>Tipo de Ejercicio: </b> " . $filas->tipoE . "</p><b>
+            Video de referencia: </b> <a href='".$filas->videoE."'target='_blank'>Ver video</a>
+            <p class='contenido-titulo3'><b>Realizar:</b> " . $filas->cantidadE . " series de " . $filas->repeticionesE .  " repeticiones</p>
+            
+            <p><strong></strong>" . $filas->descripcionE . "</p>
+            </div>
+            </div>";
             }
         }
     }
