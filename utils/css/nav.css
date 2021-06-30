@@ -157,7 +157,7 @@ body {
 .nav-list li:hover a {
   color: var(--colorBlanco);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1380px) {
   .header-logo {
     flex-basis: 20%;
   }
