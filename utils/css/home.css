@@ -149,6 +149,8 @@
 .food-button {
   flex-basis: 100%;
   padding: 1rem 0rem;
+  display: flex;
+  margin: 0rem 1rem;
 }
 .food-button a {
   width: 90%;
@@ -164,6 +166,30 @@
   border: 1px solid var(--colorBlanco);
   cursor: pointer;
 }
+.food-button .add-favorite-button{
+  background-color: var(--colorVerdeFuerte);
+}
+.food-button .add-favorite-button:hover{
+  background-color: var(--colorBlanco);
+  color: var(--colorVerdeFuerte);
+  border: 1px solid var(--colorVerdeFuerte);
+}
+
+
+
+
+
+.food-button .delete-favorite-button{
+  background-color: #0896ce;
+  color: var( --colorBlanco );
+  font-weight: 500;
+}
+.food-button .delete-favorite-button:hover{
+  background-color: var(--colorBlanco);
+  color: #0896ce ;
+  border: 1px solid #0896ce;
+}
+
 .food-button a:hover {
   background-color: var(--colorBlanco);
   color: var(--colorNaranja);

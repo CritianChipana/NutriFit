@@ -98,15 +98,19 @@
     background: #ffffff;
     box-shadow:  5px 5px 8px #f5f5f5,
                 -5px -5px 8px #ffffff;
+    /* opacity: 1; */
+    /* transition: all , 2s ease 2s; */
 
 }
+
+
 
 .card-sport:hover{
     position: relative;
     bottom: 10px;
     box-shadow:  5px 5px 10px #666666,
                 -5px -5px 10px #ffffff;
-
+    /* opacity: 1; */
 }
 
 
@@ -128,15 +132,15 @@
     display: inline-block;
     width: 200px;
 
-    background-color: #FF922C;
     background-color: #54BF29;
+    background-color: #FF922C;
     border: 2px solid transparent;
 
 }
 
 .card-sport a:hover{
-    border: 2px solid #54BF29;
-    color: #54BF29;
+    border: 2px solid #FF922C;
+    color: #FF922C;
     background-color: #ffffff;
 
 }

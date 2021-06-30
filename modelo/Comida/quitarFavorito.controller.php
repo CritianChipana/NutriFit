@@ -21,6 +21,6 @@ if ($method == "PUT") {
     $json = null;
     $food = json_decode(file_get_contents("php://input"), true);
     $ComidaService = new ComidaService();
-    $json = $ComidaService->addToFavoriteFood($food);
+    $json = $ComidaService->removeToFavoriteFood($food);
     echo $json;
 }
