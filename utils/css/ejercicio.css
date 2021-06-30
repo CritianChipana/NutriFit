@@ -1,0 +1,149 @@
+@import url("./nav.css");
+@import url("./footer.css");
+
+/*Contenido princiapl*/
+.main {
+  z-index: -1;
+  width: 100%;
+  background-image: url("../img/burbujes3.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10rem 0rem;
+}
+
+.food {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: var(--colorBlanco);
+  align-items: center;
+  border: 0.1rem solid var(--colorSombra);
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+.food-image {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.food-image img {
+  max-width: 39rem;
+  width: 100%;
+  margin: auto;
+}
+.food-contain {
+  flex-basis: 100%;
+  padding: 0rem 2rem;
+}
+.food-contain h1 {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  font-size: 3.5rem;
+}
+.food-contain h2 {
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid var(--colorSombra);
+}
+.food-contain p {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1rem 0rem;
+}
+.preparation {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10rem;
+}
+.preparation-title {
+  font-size: 3.8rem;
+  text-align: center;
+  padding: 5rem 0rem;
+}
+.preparation-contain {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 0rem 4rem 0rem;
+}
+.preparation-video {
+  flex-basis: 100%;
+  background-color: var(--bgcolorIngredients);
+  padding: 2rem 4rem 1rem 4rem;
+}
+.preparation-video h3 {
+  font-size: 3rem;
+  color: var(--colorLetra);
+  border-bottom: 1px solid var(--colorNaranja);
+}
+.link-food {
+  font-size: 2rem;
+  padding: 2rem 0rem 1rem 0rem;
+}
+.link-food i {
+  padding-right: 1rem;
+  color: var(--colorNaranja);
+}
+.preparation-ingredients {
+  flex-basis: 100%;
+  padding: 5rem 4rem;
+  background-color: var(--bgcolorIngredients);
+}
+.preparation-ingredients h4 {
+  font-size: 3rem;
+  text-align: start;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid var(--colorNaranja);
+}
+.ingredients-list {
+  padding: 1rem 0rem;
+  width: 100%;
+  list-style: none;
+}
+.ingredients-list li {
+  font-size: 1.6rem;
+  padding: 1rem 0rem;
+}
+.ingredients-list li i {
+  padding-right: 1rem;
+  color: var(--colorNaranja);
+}
+.preparation-detail {
+  flex-basis: 100%;
+  margin-top: 2rem;
+  background-color: var(--bgcolorPreparation);
+  padding: 5rem 4rem;
+}
+.preparation-detail h5 {
+  font-size: 2.5rem;
+  padding: 2rem 0rem;
+}
+.preparation-detail p {
+  font-size: 1.8rem;
+  padding: 1rem 0rem;
+}
+@media screen and (min-width: 1024px) {
+  .food {
+    padding-bottom: 0rem;
+  }
+  .food-image {
+    flex-basis: 50%;
+  }
+  .food-contain {
+    flex-basis: 50%;
+    padding: 0rem 4rem;
+  }
+  .food-contain p {
+    padding: 2rem 0rem;
+  }
+
+  .ingredients-list li {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
+}

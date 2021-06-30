@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap');
+/*  font-family: 'Roboto', sans-serif; */
+/********************************************ELIMINAR*/
+table#mitabla {
+    border-collapse: collapse;
+    background-color:#ffffff ;
+    margin:auto;
+    margin-bottom: 50px;
+
+
+}
+
+td.a {
+    background-color: #54BF29;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    color:#ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:center;
+    
+
+
+
+}
+
+.cabecera tr{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 15px;
+
+
+}
+
+
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+
+
+
+/************************************** MARCA */
+
+
+
+.Contenedor-Marca{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20PX;
+    margin-right: 20px;
+    /*background-color: #666666;*/
+
+}
+
+.contenedor-body{
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white ;
+}
+
+
+.Marca-logo2{
+    display: flex;
+    align-items: center;
+}
+
+.fas{
+ margin-left: 10px;
+}
+
+.headerL2{
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.titulo_ejercicio{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color:#ffffff;
+    background-color: #54BF29;
+    padding:20px;
+}
+
+.Marca-logo{
+    display: flex;
+    align-items: center;
+}
+
+.Contenedor-Marca p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+.fa-fire-alt{
+    color: #54BF29;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+.titulo-modificar{
+    text-align: center;
+
+}
+.btn-atras-modificar_l{
+    padding: 10px;
+    margin-right: 10px;
+    font-size:12px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+
+.btn-atras-modificar{
+    padding: 10px;
+    margin-right: 10px;
+    font-size:12px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #54BF29;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+
+.btn-atras-modificar:hover{
+    /* opacity: 0.5; */
+    border: 2px solid #FF922C;
+    background-color: #ffffff;
+    color: #FF922C;
+}
+
+.uil-arrow-left{
+    font-size: 25px;
+}
+
