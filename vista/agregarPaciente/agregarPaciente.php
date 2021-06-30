@@ -65,9 +65,6 @@ if (isset($_SESSION["usuario"])) {
             <img src="imgs/pacientes.png" alt="imgPacientes" >
         </div>
     </section>
-    <a href="cerrar-sesion.php" >
-                <i class="uil uil-signout"></i>
-                    Cerrar Session
-                </a>
+
 </body>
 </html>
