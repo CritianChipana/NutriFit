@@ -22,8 +22,8 @@
             </div>
             <nav class="content-navBar">
                 <ul>
-                    <li><a href="login.php" style="text-decoration:none" class="content-navBar--active">Inicio</a></li>
-                    <li><a href="#" style="text-decoration:none" class="content-navBar--noactive">Contacto</a></li>
+                    <li><a href="index.php" style="text-decoration:none" class="content-navBar--active">Inicio</a></li>
+                    <li><a href="contacto.php" style="text-decoration:none" class="content-navBar--noactive">Contacto</a></li>
                     <li><a href="login.php" style="text-decoration:none" class="content-navBar--noactive">Login</a></li>
                 </ul>
             </nav>

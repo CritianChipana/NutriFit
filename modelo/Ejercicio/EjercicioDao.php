@@ -53,7 +53,7 @@ class EjercicioDao extends Conexion
         if ($resultado->rowCount() > 0) {
             foreach ($filas as $filas) {
                 echo "<div class='contenido'>
-                <figure><img  src='" . $filas->imgE . "' height='400'></img></figure>
+                <figure><img  src='" . $filas->imgE . "' ></img></figure>
                 <div class='info-ejemplos' >
             <p class='contenido-titulo'> " . $filas->nombreE . "</p>
             <p class='contenido-titulo2'><b>Tipo de Ejercicio: </b> " . $filas->tipoE . "</p><b>
