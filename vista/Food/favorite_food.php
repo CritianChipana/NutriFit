@@ -39,7 +39,7 @@ if (isset($_SESSION["usuario"])) {
             <i class="fas fa-fire-alt"></i>
             <p>NUTRI&FIT</p>
         </div>
-        <a class="btn-atras-modificar" href="../menu.php"><i class="uil uil-arrow-left"></i>Menu</a>
+        <a class="btn-atras-modificar"  href="../home.php"><i class="uil uil-arrow-left"></i>Menu</a>
     </div>
 
     <div class="conteiner-food-favorite">

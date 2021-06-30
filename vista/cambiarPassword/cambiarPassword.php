@@ -27,7 +27,7 @@
     <header class="headerCambiarContraseña">
         
         <div class="contInicio">
-            <a id="inicio" href="../../index.php" style="text-decoration:none"><h3>Inicio</h3></a>
+            <a id="inicio" href="../home.php" style="text-decoration:none"><h3>Inicio</h3></a>
         </div>
 
         <div class="contLogoMarca">

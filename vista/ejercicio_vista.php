@@ -27,7 +27,7 @@
                 <i class="fas fa-fire-alt"></i>
                 <p>NUTRI&FIT</p>
             </div>
-            <a class="btn-atras-modificar" href="menu.php"><i class="uil uil-arrow-left"></i>Menu</a>
+            <a class="btn-atras-modificar" href="menu.php">Menu</a>
         </div>
 <?php  
         if (isset($_SESSION["usuario"])) {
