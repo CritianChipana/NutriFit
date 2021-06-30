@@ -22,7 +22,7 @@
             </div>
             <nav class="content-navBar">
                 <ul>
-                    <li><a href="index.html" style="text-decoration:none" class="content-navBar--active">Inicio</a></li>
+                    <li><a href="login.php" style="text-decoration:none" class="content-navBar--active">Inicio</a></li>
                     <li><a href="#" style="text-decoration:none" class="content-navBar--noactive">Contacto</a></li>
                     <li><a href="login.php" style="text-decoration:none" class="content-navBar--noactive">Login</a></li>
                 </ul>

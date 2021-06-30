@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="assets/css/modificarPaciente.css">
+    <link rel="icon" href="vistaHomeNutriF/imgs/favicon.ico">
+
 </head>
 <body>
     <main class="contenedor-main-modificar" >
@@ -26,7 +28,10 @@
         </div>
         <?php 
             $idusu = "";
-            $idusu = $_GET["idusu"];
+            if(isset($_GET["idusu"])){
+                $idusu = $_GET["idusu"];
+
+            };
             if(!empty($idusu)){
                 UsuarioControlador::listarusuariomod2($idusu);
             }else{

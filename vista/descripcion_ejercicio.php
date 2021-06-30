@@ -42,8 +42,8 @@
                 if (isset($_SESSION["usuario"])) {
                 
                     ?>
-                            <table id="mitabla">
-                                <tr class="cabecera">
+                            <div id="mitabla">
+                                <!-- <div class="cabecera">
                                     <td class="a">TITULO</td>
                                     <td class="a">TIPO</td>
                                     <td class="a">VIDEO</td>
@@ -51,9 +51,9 @@
                                     <td class="a">CANTIDAD</td>
                                     <td class="a">IMAGEN</td>
                                     <td class="a">DESCRIPCION</td>
-                                </tr>
+                                </div>
                                 <tr class="cabecera-2">
-                                
+                                 -->
                                 <?php 
                                 
                                 EjercicioControlador::listarDescripcionEjercicio($idej);
@@ -61,7 +61,7 @@
 
                                 </tr>
                                 
-                            </table>
+                            </div>
                         </div>
                     </div>
                     <?php include 'partials/footer.php';
