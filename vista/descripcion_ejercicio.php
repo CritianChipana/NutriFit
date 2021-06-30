@@ -23,13 +23,13 @@
 
 <body>
         <div class="Contenedor-Marca">
-            <div class="Marca-logo" >
+            <div  class="Marca-logo" >
                 <i class="fas fa-fire-alt"></i>
                 <h2 class="headerL2">NUTRI&FIT</h2>
             </div>
             <div class="Marca-logo2">
                 <a class="btn-atras-modificar_l" href="home.php">Home<i class="fas fa-home"></i></a> 
-                <a class="btn-atras-modificar_l" href="#root">Foods<i class="fas fa-utensils"></i></a> 
+                <a class="btn-atras-modificar_l" href="home.php#root">Foods<i class="fas fa-utensils"></i></a> 
                 <a class="btn-atras-modificar" href="ejercicio_vista.php">Atras<i class="fas fa-arrow-circle-left"></i></a>
             </div>
             

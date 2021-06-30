@@ -44,7 +44,9 @@ if (isset($_SESSION["usuario"])) {
 
     <div class="conteiner-food-favorite">
         <div class="food-favorite" >
-            <div id="root2" class="content-favorite-foot" ></div>
+            <div id="root2" class="content-favorite-foot" >
+
+            </div>
         </div>
     </div>
 

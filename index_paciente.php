@@ -9,4 +9,4 @@ if (isset($_SESSION["usuario"])) {
     header("location:vista/index_paciente.php");
 }
 ?>
-<?php include 'partials/menu.php'   ?>
+<?php include 'partials/menu.php'?>

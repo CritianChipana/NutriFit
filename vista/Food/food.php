@@ -43,8 +43,10 @@
                 <div class="header-hamburger"><i class="fas fa-bars"></i></div>
                 <nav class="header-nav">
                     <ul class="nav-list">
+                        
                         <li><a href="#preparation">Preparation</a></li>
-                        <li><a href="">Exercises</a></li>
+                        <li><a href="../ejercicio_vista.php">Exercises</a></li>
+                        <li><a href="../home.php">Home</a></li>
                         <li><a href="../cerrar-sesion.php">Cerrar Sesión</a></li>
                     </ul>
                 </nav>
