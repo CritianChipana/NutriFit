@@ -91,7 +91,7 @@ const Foods = () => {
   }, []);
   return (
     <section className="foods">
-      <h3 className="foods-title">Favorite Foods</h3>
+      <h3 className="foods-title">Platos</h3>
       {foods.error ? (
         <NotFoods />
       ) : (

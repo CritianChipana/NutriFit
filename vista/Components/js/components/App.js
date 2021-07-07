@@ -44,7 +44,7 @@ const FavoriteFood = () => {
   }, []);
   return (
     <>
-      <h3 className="FavoriteFood-title">Favorite FavoriteFood</h3>
+      <h3 className="FavoriteFood-title">Platos favoritos</h3>
       <section className="FavoriteFood">
         {FavoriteFood.error ? (
           <NotFavoriteFood />
