@@ -2,7 +2,7 @@
 class Conexion{
     public static function conectar(){
         try {
-            $cn = new PDO("mysql:host=localhost:3306;dbname=bdscrum","root","1ñ0ññn08Maria");
+            $cn = new PDO("mysql:host=localhost:3306;dbname=bdscrum","root","");
             $cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $cn;
         } catch (Exception $e) {
