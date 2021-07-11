@@ -67,5 +67,3 @@ class EjercicioDao extends Conexion
         }
     }
 }
-
-?>
