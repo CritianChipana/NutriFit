@@ -16,6 +16,12 @@ if ($method == "GET") {
         $obj = $ComidaService->getFood($id);
         $json = json_encode($obj);
         echo $json;
+    } else if (!empty($_GET['food'])) {
+        $food = $_GET['food'];
+        $ComidaService = new ComidaService();
+        $obj = $ComidaService->getFoodByName($food);
+        $json = json_encode($obj);
+        echo $json;
     } else {
         $vector = array();
         $ComidaService = new ComidaService();
@@ -47,4 +53,3 @@ if ($method == "PUT") {
     $json = $ComidaService->updateFood($food);
     echo $json;
 }
-

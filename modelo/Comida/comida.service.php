@@ -32,6 +32,35 @@ class ComidaService
             return $vector[0];
         }
     }
+    public function getFoodByName($food)
+    {
+        $vector = array();
+        $conexion = new Conexion();
+        $db = $conexion->conectar();
+        $sql = "SELECT * FROM comida where (nombre LIKE '%" . $food . "%')";
+        $consulta = $db->prepare($sql);
+        $consulta->execute();
+        while ($fila = $consulta->fetch()) {
+            $vector[] = array(
+                "id" => $fila['idcomidas'],
+                "name" => $fila['nombre'],
+                "description" => $fila['descripcion'],
+                "image" => $fila['imagen'],
+                "ingredients" => $fila["ingredientes"],
+                "preparation" => $fila["preparacion"],
+                "preparationVideo" => $fila["video"],
+                "estadofav" => $fila["estadofav"],
+                "iddiagnostico" => $fila["iddiagnostico"],
+            );
+        }
+        if (empty($vector[0])) {
+            $error = array();
+            $error[] = array("error" => "No hay comidas en db");
+            return $error[0];
+        } else {
+            return $vector;
+        }
+    }
 
     public function getFoods()
     {
@@ -212,5 +241,4 @@ class ComidaService
             return '{"ok":"false","msg":"' . $e . '}';
         }
     }
-
 }
