@@ -29,7 +29,7 @@ class EjercicioDao extends Conexion
                 "<div class='card-sport'>
                     <p>" . $filas->nombreE ."</p>
                     <div class='contenedor-img-ejercicio'>
-                        <img src='" . $filas->imgE . "'></img>
+                        <img src='" . $filas->imagenE . "'></img>
                     </div>
                     <div>
                         <a class='boton' href='descripcion_ejercicio.php?idej=" . $filas->idejercicio . "'>Ver mas</a>
@@ -41,7 +41,7 @@ class EjercicioDao extends Conexion
 // <a href=''></a>
     public static function listarDescripcionEjercicio($idej)
     {
-        $query = "SELECT e.idejercicio, e.nombreE, e.tipoE, e.videoE, e.repeticionesE, e.cantidadE, e.imgE, e.descripcionE 
+        $query = "SELECT e.idejercicio, e.nombreE, e.tipoE, e.videoE, e.repeticionXseriesE, e.duracionE, e.imagenE, e.descripcionE 
                     FROM ejercicios e 
                     WHERE idejercicio = :idej";
         self::getConexion();
@@ -53,12 +53,12 @@ class EjercicioDao extends Conexion
         if ($resultado->rowCount() > 0) {
             foreach ($filas as $filas) {
                 echo "<div class='contenido'>
-                <figure><img  src='" . $filas->imgE . "' ></img></figure>
+                <figure><img  src='" . $filas->imagenE . "' ></img></figure>
                 <div class='info-ejemplos' >
             <p class='contenido-titulo'> " . $filas->nombreE . "</p>
             <p class='contenido-titulo2'><b>Tipo de Ejercicio: </b> " . $filas->tipoE . "</p><b>
             Video de referencia: </b> <a href='".$filas->videoE."'target='_blank'>Ver video</a>
-            <p class='contenido-titulo3'><b>Realizar:</b> " . $filas->cantidadE . " series de " . $filas->repeticionesE .  " repeticiones</p>
+            <p class='contenido-titulo3'><b>Realizar:</b> " . $filas->duracionE . " series de " . $filas->repeticionXseriesE .  " repeticiones</p>
             
             <p><strong></strong>" . $filas->descripcionE . "</p>
             </div>
