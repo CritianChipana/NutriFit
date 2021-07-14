@@ -109,6 +109,34 @@
                 </div>
 
             </div>
+            <div class="contenedor-titulo-menu">
+                <h4>Ejercicios:</h4>
+            </div>
+            <div class="contenedor-menu contenedor">
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="./Exercises/delete_exercise.php">
+                        <i class="fas fa-trash"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Eliminar">
+                    </a>
+                </div>
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="./Exercises/register_exercise.php">
+                        <i class="fas fa-user-plus"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Agregar">
+                    </a>
+                </div>
+
+                <div class="contenedor-item-menu">
+                    <a class="link-menu" href="./Exercises/edit_exercise.php">
+                        <i class="fas fa-user-edit"></i>
+                        <input class=" btn_menu btn-eliminar-menu" type="button" value="Modificar">
+                    </a>
+                </div>
+
+            </div>
+
         </div>
     </div>
 

@@ -14,10 +14,6 @@
   --colorInput: #4c5d65;
   --colorBorderInput: #bac6c4;
   --colorDescriptionForm: #21313c;
-  --colorTable: #ffffff;
-  --colorTableHover: #f7f9fc;
-  --bgColorTableHead: #f7f9fc;
-  --btnColorDelete: #f13426;
 }
 * {
   margin: 0rem;
@@ -29,89 +25,51 @@
 html {
   font-size: 62.5%;
 }
-
-.container {
+/*Contenido princiapl*/
+.register {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
-  background: url("../../img/bgFoods.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-top: 2rem;
+  flex-direction: column;
 }
-.main {
-  transition: all 0.4s;
-  width: 98%;
-  max-width: 130rem;
-  margin: auto;
-  background-color: var(--colorTable);
-  opacity: 0.9;
+.register-background {
+  flex: 3;
+  background-image: url("../../img/register_food.png"),
+    linear-gradient(
+      226deg,
+      var(--colorVerdeFuerte) 48%,
+      var(--colorVerdeFuerte) 100%
+    );
+}
+.register-form {
+  flex: 7;
+  padding: 3rem 2rem;
+}
+.form {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  padding: 2rem 2rem;
-  border-radius: 2rem;
+  max-width: 500px;
 }
-.main:hover {
-  transition: all 0.4s;
-  opacity: 1;
-}
-.header {
+.form-title {
   flex-basis: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
+  padding: 1rem 0rem 0rem 0rem;
+  font-size: 3.5rem;
 }
-.header__title {
-  font-size: 2rem;
-  color: var(--colorLetra);
-  text-align: start;
-  flex: 2;
-  padding-top: 1rem;
+.form-title i {
+  color: var(--colorNaranja);
 }
-.header__back {
-  flex: 1;
-  display: block;
-  text-align: end;
-  padding: 2rem 0rem;
-}
-.header__back a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  border: 0.1rem solid var(--colorVerdeFuerte);
-  padding: 1rem 2rem;
-  color: var(--colorVerdeFuerte);
-  background-color: var(--colorBlanco);
-}
-.header__back a:hover {
-  transition: all 0.3s;
-  border: 0.1rem solid var(--colorBlanco);
-  padding: 1rem 2rem;
-  color: var(--colorBlanco);
-  background-color: var(--colorVerdeFuerte);
-}
-.last-modified {
+.form-description {
   flex-basis: 100%;
-  padding: 2rem 0rem;
-  background-color: var(--colorDescriptionForm);
-}
-.edit-form {
-  flex-basis: 100%;
-}
-.form-food {
-  width: 100%;
-  padding: 2rem 0rem;
-  display: flex;
-  flex-wrap: wrap;
+  font-size: 3rem;
+  padding: 1rem 0rem;
+  color: var(--colorDescriptionForm);
 }
 .form-group {
   flex-basis: 100%;
   display: flex;
   padding-bottom: 1rem;
   flex-wrap: wrap;
-  flex-direction: row;
 }
 .form-group label {
   flex-basis: 100%;
@@ -125,7 +83,6 @@ html {
   padding: 1rem 0.5rem;
   font-size: 1.6rem;
   border: 0.15rem solid var(--colorBorderInput);
-  opacity: 0.9;
 }
 .form-group select {
   flex-basis: 100%;
@@ -137,9 +94,6 @@ html {
 }
 .form-group select option {
   padding: 5rem 0rem;
-}
-.form-group input[type="file"] {
-  width: 100%;
 }
 .form-group button {
   background-color: var(--colorVerdeFuerte);
@@ -157,17 +111,6 @@ html {
   background-color: var(--colorVerdeSuave);
   color: var(--colorLetra);
 }
-.food-image {
-  display: none;
-  padding: 2rem 0rem 0rem 0rem;
-  flex-basis: 100%;
-}
-.food-image img {
-  width: 100%;
-  max-width: 400px;
-  object-fit: cover;
-  object-position: center;
-}
 .exercise-image {
   display: none;
   padding: 2rem 0rem 0rem 0rem;
@@ -175,29 +118,34 @@ html {
 }
 .exercise-image img {
   width: 100%;
-  max-width: 400px;
-  object-fit: cover;
-  object-position: center;
 }
 @media screen and (min-width: 768px) {
   /*Contenido princiapl*/
+  .register {
+    flex-direction: row;
+  }
+  .register-background {
+    flex: 2;
+  }
+  .register-form {
+    flex: 7;
+    padding: 3rem 5rem;
+  }
   .form-group button {
-    flex-basis: 20%;
+    flex-basis: auto;
   }
-  .header__title {
-    font-size: 3.5rem;
-  }
-  .header__back a {
-    font-size: 1.8rem;
-  }
-  .main {
-    width: 80%;
-    padding: 2rem 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .register-form {
+    background: url("../../img/exercise.svg");
+    background-repeat: no-repeat;
+    background-size: 70rem 70rem;
+    background-position: bottom right;
   }
 }
 @media screen and (min-width: 1440px) {
   .register-form {
-    background: url("../../img/cocina.png");
+    background: url("../../img/exercise.svg");
     background-repeat: no-repeat;
     background-size: 70rem 70rem;
     background-position: bottom right;
