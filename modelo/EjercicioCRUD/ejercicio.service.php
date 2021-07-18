@@ -7,7 +7,7 @@ class EjercicioService
         $vector = array();
         $conexion = new Conexion();
         $db = $conexion->conectar();
-        $sql = "SELECT * FROM ejercicio where idejercicio=:id";
+        $sql = "SELECT * FROM ejercicios where idejercicio=:id";
         $consulta = $db->prepare($sql);
         $consulta->bindParam(':id', $id);
         $consulta->execute();
@@ -38,7 +38,7 @@ class EjercicioService
         $vector = array();
         $conexion = new Conexion();
         $db = $conexion->conectar();
-        $sql = "SELECT * FROM ejercicio";
+        $sql = "SELECT * FROM ejercicios";
         $consulta = $db->prepare($sql);
         $consulta->execute();
         while ($fila = $consulta->fetch()) {
@@ -127,7 +127,7 @@ class EjercicioService
         try {
             $conexion = new Conexion();
             $db = $conexion->conectar();
-            $sql = "INSERT INTO ejercicio (nombreE, tipoE,videoE,duracionE,seriesE,repeticionXseriesE,imagenE,descripcionE) 
+            $sql = "INSERT INTO ejercicios (nombreE, tipoE,videoE,duracionE,seriesE,repeticionXseriesE,imagenE,descripcionE) 
             VALUES (:nombreE,:tipoE , :videoE,:duracionE,:seriesE,:repeticionXseriesE,:imagenE,:descripcionE)";
             $consulta = $db->prepare($sql);
             $consulta->bindParam(':nombreE', $exercise["name"]);
@@ -150,7 +150,7 @@ class EjercicioService
         try {
             $conexion = new Conexion();
             $db = $conexion->conectar();
-            $sql = "UPDATE ejercicio SET nombreE='" . $exercise["name"] . "',tipoE='" . $exercise["type"] . "',videoE='"
+            $sql = "UPDATE ejercicios SET nombreE='" . $exercise["name"] . "',tipoE='" . $exercise["type"] . "',videoE='"
                 . $exercise["video"] . "',descripcionE='" . $exercise["description"] . "',imagenE='" . $exercise["image"] . "',duracionE='" .
                 $exercise["duration"] . "',seriesE=" . $exercise["series"] . ",repeticionXseriesE='" . $exercise["repeatxserie"] . "' WHERE idejercicio=" . $exercise["id"];
             $consulta = $db->prepare($sql);
@@ -167,7 +167,7 @@ class EjercicioService
             $conexion = new Conexion();
             $db = $conexion->conectar();
             if (count($exercise) == 1) {
-                $sql = "DELETE FROM ejercicio WHERE idejercicio =:id";
+                $sql = "DELETE FROM ejercicios WHERE idejercicio =:id";
                 $consulta = $db->prepare($sql);
                 $consulta->bindParam(':id', $exercise["id"]);
                 $consulta->execute();

@@ -40,7 +40,7 @@ const FavoriteFood = () => {
       .then((FavoriteFood) => {
         setFavoriteFood(FavoriteFood);
       })
-      .catch((e) => console.log("Error", e,"vamos a morir"));
+      .catch((e) => console.log("Error", e, "vamos a morir"));
   }, []);
   return (
     <>
@@ -48,16 +48,16 @@ const FavoriteFood = () => {
       <section className="FavoriteFood">
         {FavoriteFood.error ? (
           <NotFavoriteFood />
-          ) : (
-            FavoriteFood.map((food) => (
-              <Food
+        ) : (
+          FavoriteFood.map((food) => (
+            <Food
               key={food.id}
               name={food.name}
               id={food.id}
               image={food.image}
-              />
-              ))
-              )}
+            />
+          ))
+        )}
       </section>
     </>
   );
