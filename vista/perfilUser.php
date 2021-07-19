@@ -12,19 +12,9 @@ include '../controlador/PerfilControlador.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--ReactJs-->
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <!--Babel-->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!--Typed js-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!--Stylos de index.html-->
-    <link rel="stylesheet" href="../Components/Style/favorite_foot.css" />
-    <!--GoogleFonts-->
+  
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <!--FontAwasome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="vistaHomeNutriF/imgs/favicon.ico">
     <link rel="stylesheet" href="perfil/perfil.css">
@@ -57,9 +47,10 @@ if (isset($_SESSION["usuario"])) {
 
     <div class="perfil">
         <figure class="fondoperfil">
-            <img src="https://i.pinimg.com/564x/c6/aa/34/c6aa345511162e194f8394fc147e346e.jpg" alt="No se encontro imgen">
+            <img name="img-perfil" id="img-perfil" src="https://i.pinimg.com/564x/c6/aa/34/c6aa345511162e194f8394fc147e346e.jpg" alt="No se encontro imgen">
         </figure>
-        <input type="file" name="new-photo" id="new-photo">
+        <input hidden type="file" name="new-photo" id="new-photo">
+        <button id="btn" class="btn" >Cambiar perfil</button>
         <div class="perfil-datos-user" >
             <div class="indice-datos" >
                 <p>NOMBRE: </p>
@@ -149,8 +140,9 @@ if (isset($_SESSION["usuario"])) {
 
 
 <script src="perfil/js.js"></script>
-<script type="text/babel" src="../Components/perfil/components/App.js"></script>
-<script type="text/babel" src="../Components/perfil/Perfil.js"></script>
+<script src="perfil/cargtarImgen.js"></script>
+<!-- <script type="text/babel" src="../Components/perfil/components/App.js"></script>
+<script type="text/babel" src="../Components/perfil/Perfil.js"></script> -->
 
 </body>
 </html>
