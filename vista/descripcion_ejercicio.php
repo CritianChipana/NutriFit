@@ -64,7 +64,14 @@
                             </div>
                         </div>
                     </div>
-                    <?php include 'partials/footer.php';
+                    <?php 
+                    
+                    include 'partials/footer.php';/*
+                    include "../vista/comentario_exercise.php";
+                    $ObjeComentario = new Comentario;
+                    $ObjeComentario -> comentar($idej);
+*/
+
                 
 
                 }

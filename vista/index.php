@@ -6,12 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vistaHomeNutriF/indexstyle.css">
+    <link rel="stylesheet" href="whatsapp.css">
     <link rel="stylesheet" href="vistaHomeNutriF/normalize.css">
     <link rel="icon" href="vistaHomeNutriF/imgs/favicon.ico">
     <title>Nutri & FIT - Inicio</title>
 
 </head>
 <body>
+<script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "100222825673082", // Facebook page ID
+                whatsapp: "+51 982187783", // WhatsApp number
+                call_to_action: "¡Hola! Somos Nutri&Fit", // Call to action
+                button_color: "#54BF29", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "facebook,whatsapp", // Order of buttons
+                pre_filled_message: "Somos Nutri&Fit ¿En qué te podemos ayudar?", // WhatsApp pre-filled message
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
     <img class="eclipse1" src="vistaHomeNutriF/imgs/Ellipse 1.png" alt="elipsenaranja">
     <img class="eclipse2" src="vistaHomeNutriF/imgs/Ellipse 2.png" alt="elipseverde">
     <div class="contenido">
@@ -29,9 +48,9 @@
             </nav>
             <nav class="content-navRedes">
                 <ul>
-                    <li><a href="https://www.facebook.com/" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoFacebook.png" alt="logoFacebook"></a></li>
-                    <li><a href="https://twitter.com/" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoTwitter.png" alt="logoTwitter"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoIG.png" alt="LogoInstagram"></a></li>
+                    <li><a href="https://www.facebook.com/Nutri-Fit-100222825673082" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoFacebook.png" alt="logoFacebook"></a></li>
+                    <li><a href="https://twitter.com/nutrifitcle" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoTwitter.png" alt="logoTwitter"></a></li>
+                    <li><a href="https://www.instagram.com/nutrifit01_/" target="_BLANK"><img src="vistaHomeNutriF/imgs/logoIG.png" alt="LogoInstagram"></a></li>
                 </ul>
             </nav>
         </header>
