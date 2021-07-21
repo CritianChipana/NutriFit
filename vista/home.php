@@ -36,6 +36,7 @@
     header("location:login.php");
   }
   ?>
+  <?php $idusu = $_SESSION["usuario"]["id"]; ?>
   <input id="idUsuario" type="hidden" value="<?php echo $idusu = $_SESSION["usuario"]["id"]; ?>">
   <div class="loader">
     <div class="container">
@@ -50,6 +51,7 @@
             <li><a href="ejercicio_vista.php">Exercises</a></li>
             <li><a href="Food/favorite_food.php">Favoritos</a></li>
             <li><a href="index_paciente.php">Servicios</a></li>
+            <li><a href="perfilUser.php">Perfil</a></li>
             <li><a href="../vista/cambiarPassword/cambiarPassword.php">Cambiar Contraseña</a></li>
             <li><a href="cerrar-sesion.php">Cerrar Session</a></li>
           </ul>
@@ -170,7 +172,7 @@
         </ul>
       </footer>
     </div>
-  </div>
+    
   <script type="text/javascript">
     var typed = new Typed('.element', {
       strings: ["Come bien", "Vive bien", "NutriFit"],

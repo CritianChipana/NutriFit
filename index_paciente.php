@@ -8,5 +8,6 @@ if (isset($_SESSION["usuario"])) {
 } else {
     header("location:vista/index_paciente.php");
 }
+    
 ?>
 <?php include 'partials/menu.php'?>

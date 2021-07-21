@@ -5,6 +5,7 @@ class Conexion
     {
         try {
             $cn = new PDO("mysql:host=localhost:3306;dbname=scrum", "root", "1ñ0ññn08Maria");
+/*            $cn = new PDO("mysql:host=localhost;dbname=bdscrum", "root", "");*/
             $cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $cn;
         } catch (Exception $e) {
