@@ -65,7 +65,26 @@
                     <img src="vistaHomeNutriF/imgs/nutricionDeportiva.jpg" alt="nutricionDeportiva">
                 </article>
             </section>
+            <section>
+            <div class="content-texto">
+            <h4>DANOS UNA VISITA, AQUI NOS ENCUENTRAS!!!</h4>
+            <p>CENTRO DE SERVICIO NUTRICIONAL "NUTRI-FIT"</p>
+            <div class="responsive-iframe">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.5021070096886!2d-76.93468728561535!3d-12.214244248363107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9588abb2853%3A0x4bae8a2bca307eb6!2sUniversidad%20Nacional%20Tecnol%C3%B3gica%20de%20Lima%20Sur%20UNTELS!5e0!3m2!1ses-419!2spe!4v1619497374709!5m2!1ses-419!2spe"
+            width="1300"
+            height="550"
+            style="border: 0px;"
+            allowfullscreen=""
+            loading="lazy"
+            ></iframe>
+            </div>
+            </section>
+      </div>
+    </section>
         </main>
     </div>
+    
+    
 </body>
 </html>

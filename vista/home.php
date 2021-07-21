@@ -172,7 +172,7 @@
         </ul>
       </footer>
     </div>
-  </div>
+    
   <script type="text/javascript">
     var typed = new Typed('.element', {
       strings: ["Come bien", "Vive bien", "NutriFit"],
